@@ -7,22 +7,22 @@
   
   <title>Unity3d连接MySql查询数据，在UI显示数据 | Luxingguo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#前言Unity3d通过连接MySql可以查询自己想要的数据，并在UI中显示。需要用到的软件：（1）Unity3d 2019.3.0a8（2）Visual Studio 2017（3）MySQL Server 5.7（4）Navicat Premium 若没有安装软件的小伙伴可以到官网下载：（1）和（2）https://unity.cn 安装的Unity3d的时候会连着安装Visual Studi">
+  <meta name="description" content="前言Unity3d通过连接MySql可以查询自己想要的数据，并在UI中显示。需要用到的软件：（1）Unity3d 2019.3.0a8（2）Visual Studio 2017（3）MySQL Server 5.7（4）Navicat Premium 若没有安装软件的小伙伴可以到官网下载：（1）和（2）https://unity.cn 安装的Unity3d的时候会连着安装Visual Studio">
 <meta name="keywords" content="Unity3d,C#,MySql">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Unity3d连接MySql查询数据，在UI显示数据">
 <meta property="og:url" content="http://yoursite.com/2019/08/21/Unity3d连接MySql查询数据，在UI显示数据/index.html">
 <meta property="og:site_name" content="Luxingguo">
-<meta property="og:description" content="#前言Unity3d通过连接MySql可以查询自己想要的数据，并在UI中显示。需要用到的软件：（1）Unity3d 2019.3.0a8（2）Visual Studio 2017（3）MySQL Server 5.7（4）Navicat Premium 若没有安装软件的小伙伴可以到官网下载：（1）和（2）https://unity.cn 安装的Unity3d的时候会连着安装Visual Studi">
+<meta property="og:description" content="前言Unity3d通过连接MySql可以查询自己想要的数据，并在UI中显示。需要用到的软件：（1）Unity3d 2019.3.0a8（2）Visual Studio 2017（3）MySQL Server 5.7（4）Navicat Premium 若没有安装软件的小伙伴可以到官网下载：（1）和（2）https://unity.cn 安装的Unity3d的时候会连着安装Visual Studio">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/2019/08/21/Unity3d连接MySql查询数据，在UI显示数据/mysql.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/08/21/Unity3d连接MySql查询数据，在UI显示数据/jiudian_table.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/08/21/Unity3d连接MySql查询数据，在UI显示数据/mysqldata.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/08/21/Unity3d连接MySql查询数据，在UI显示数据/xiaoguo.jpg">
-<meta property="og:updated_time" content="2019-08-21T23:16:54.978Z">
+<meta property="og:updated_time" content="2019-08-31T07:40:47.320Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Unity3d连接MySql查询数据，在UI显示数据">
-<meta name="twitter:description" content="#前言Unity3d通过连接MySql可以查询自己想要的数据，并在UI中显示。需要用到的软件：（1）Unity3d 2019.3.0a8（2）Visual Studio 2017（3）MySQL Server 5.7（4）Navicat Premium 若没有安装软件的小伙伴可以到官网下载：（1）和（2）https://unity.cn 安装的Unity3d的时候会连着安装Visual Studi">
+<meta name="twitter:description" content="前言Unity3d通过连接MySql可以查询自己想要的数据，并在UI中显示。需要用到的软件：（1）Unity3d 2019.3.0a8（2）Visual Studio 2017（3）MySQL Server 5.7（4）Navicat Premium 若没有安装软件的小伙伴可以到官网下载：（1）和（2）https://unity.cn 安装的Unity3d的时候会连着安装Visual Studio">
 <meta name="twitter:image" content="http://yoursite.com/2019/08/21/Unity3d连接MySql查询数据，在UI显示数据/mysql.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Luxingguo" type="application/atom+xml">
@@ -92,9 +92,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#前言<br>Unity3d通过连接MySql可以查询自己想要的数据，并在UI中显示。<br>需要用到的软件：<br>（1）Unity3d 2019.3.0a8<br>（2）Visual Studio 2017<br>（3）MySQL Server 5.7<br>（4）Navicat Premium</p>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>Unity3d通过连接MySql可以查询自己想要的数据，并在UI中显示。<br>需要用到的软件：<br>（1）Unity3d 2019.3.0a8<br>（2）Visual Studio 2017<br>（3）MySQL Server 5.7<br>（4）Navicat Premium</p>
 <p>若没有安装软件的小伙伴可以到官网下载：<br>（1）和（2）<a href="https://unity.cn" target="_blank" rel="noopener">https://unity.cn</a> 安装的Unity3d的时候会连着安装Visual Studio 2017<br>(3)<a href="https://dev.mysql.com/downloads/windows/installer/8.0.html" target="_blank" rel="noopener">https://dev.mysql.com/downloads/windows/installer/8.0.html</a> 向下滑动<img src="/2019/08/21/Unity3d连接MySql查询数据，在UI显示数据/mysql.jpg"><br>(4)<a href="https://www.navicat.com.cn/store/navicat-premium" target="_blank" rel="noopener">https://www.navicat.com.cn/store/navicat-premium</a></p>
-<p>##制作步骤<br>（1）使用Navicat Premium新建一个MySql文件，新建数据库命名为test,新建jiudian_table表格</p>
+<h2 id="制作步骤"><a href="#制作步骤" class="headerlink" title="制作步骤"></a>制作步骤</h2><p>（1）使用Navicat Premium新建一个MySql文件，新建数据库命名为test,新建jiudian_table表格</p>
 <img src="/2019/08/21/Unity3d连接MySql查询数据，在UI显示数据/jiudian_table.jpg">
 <p>（2）打开Unity3d，导入MySql包</p>
 <img src="/2019/08/21/Unity3d连接MySql查询数据，在UI显示数据/mysqldata.jpg">
@@ -103,12 +103,11 @@
 
 <p>效果如下图所示</p>
 <img src="/2019/08/21/Unity3d连接MySql查询数据，在UI显示数据/xiaoguo.jpg">
-<p>#####总结：若有改进的地方或不对的地方，请多多海涵和指教。若想深入学习和指教请加我扣扣：1446846475，一起来学习哈~</p>
-
+<h5 id="总结：若有改进的地方或不对的地方，请多多海涵和指教。若想深入学习和指教请加我扣扣：1446846475，一起来学习哈"><a href="#总结：若有改进的地方或不对的地方，请多多海涵和指教。若想深入学习和指教请加我扣扣：1446846475，一起来学习哈" class="headerlink" title="总结：若有改进的地方或不对的地方，请多多海涵和指教。若想深入学习和指教请加我扣扣：1446846475，一起来学习哈~"></a>总结：若有改进的地方或不对的地方，请多多海涵和指教。若想深入学习和指教请加我扣扣：1446846475，一起来学习哈~</h5>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/21/Unity3d连接MySql查询数据，在UI显示数据/" data-id="cjzywvjuv000754u86wbwlc3r" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/21/Unity3d连接MySql查询数据，在UI显示数据/" data-id="cjzz8lxp90004y8u843qkjzvy" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySql/">MySql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
@@ -129,9 +128,9 @@
     </a>
   
   
-    <a href="/2019/08/20/第一篇文章/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/08/20/第二篇文章/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">第一篇文章</div>
+      <div class="article-nav-title">第二篇文章</div>
     </a>
   
 </nav>
