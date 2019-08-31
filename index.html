@@ -42,9 +42,9 @@
       <nav id="main-nav">
         <a id="main-nav-toggle" class="nav-icon"></a>
         
-          <a class="main-nav-link" href="/">Home</a>
+          <a class="main-nav-link" href="/">主页</a>
         
-          <a class="main-nav-link" href="/archives">Archives</a>
+          <a class="main-nav-link" href="/archives">目录</a>
         
       </nav>
       <nav id="sub-nav">
@@ -61,6 +61,336 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-Unity3d-C-声明变量-给它赋值-并使用它" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/" class="article-date">
+  <time datetime="2019-08-31T02:12:16.000Z" itemprop="datePublished">2019-08-31</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/">Unity3d_C#声明变量,给它赋值,并使用它</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><p>为什么使用变量？<br>计算机程序的运行其实就是对数据的操作，数据有数字、文字、图片这些<br>数据如何在计算机中存储？<br>通过变量，你可以把计算机内存中的变量，当成一个盒子，盒子里面存储着东西，可以放入或者取出。</p>
+<h2 id="声明变量需要指定类型和变量名"><a href="#声明变量需要指定类型和变量名" class="headerlink" title="声明变量需要指定类型和变量名"></a>声明变量需要指定类型和变量名</h2><p>type name;<br>type表示使用什么类型的盒子，来存储数据<br>name表示存储这个盒子的名字<br>实例：(每一个声明都是一条语句，语句以;结束)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int age;//int整数类型盒子，age是盒子的名字</span><br><span class="line">int hp;</span><br><span class="line">string name;//字符串类型盒子，name是盒子的名字</span><br></pre></td></tr></table></figure>
+
+<img src="/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/1.jpg">
+<p>按Ctrl+F5可运行时暂停，或者加多这条语句Console.ReadKey();按F5也可运行时暂停</p>
+<h2 id="变量类型有哪些？"><a href="#变量类型有哪些？" class="headerlink" title="变量类型有哪些？"></a>变量类型有哪些？</h2><h3 id="简单类型-整数"><a href="#简单类型-整数" class="headerlink" title="简单类型-整数"></a>简单类型-整数</h3><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>别名</th>
+<th>允许的值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>sbyte</td>
+<td>System.SByte</td>
+<td>在-128~127之间的整数</td>
+</tr>
+<tr>
+<td>byte</td>
+<td>System.Byte</td>
+<td>在0~255之间的整数</td>
+</tr>
+<tr>
+<td>short</td>
+<td>System.Int16</td>
+<td>在-32768~32767之间的整数</td>
+</tr>
+<tr>
+<td>usbort</td>
+<td>System.UInt16</td>
+<td>在0~65535之间的整数</td>
+</tr>
+<tr>
+<td>int</td>
+<td>System.Int32</td>
+<td>在-2147483648~2147483647之间的整数</td>
+</tr>
+<tr>
+<td>uint</td>
+<td>System.UInt32</td>
+<td>在0~4294967295之间的整数</td>
+</tr>
+<tr>
+<td>long</td>
+<td>System.Int64</td>
+<td>在-9223372036854775808~9223372036854775807之间的整数</td>
+</tr>
+<tr>
+<td>ulong</td>
+<td>System.UInt64</td>
+<td>在0~18446744073709551615之间的整数</td>
+</tr>
+</tbody></table>
+<img src="/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/2.jpg">
+<p>根据实际情况来选择合适的类型可节约内存，达到优化效果，比如视频点击量过亿的可以选择long类型；年龄可以选byte类型，年龄一般不超过255，除了史前动物。。</p>
+<h3 id="简单类型-小数"><a href="#简单类型-小数" class="headerlink" title="简单类型-小数"></a>简单类型-小数</h3><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>别名</th>
+<th>m的最小值</th>
+<th>m的最大值</th>
+<th>e的最小值</th>
+<th>e的最大值</th>
+<th>近似的最小值</th>
+<th>近似的最大值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>float</td>
+<td>System.Single</td>
+<td>0</td>
+<td>2的24次方</td>
+<td>-149</td>
+<td>104</td>
+<td>1.5x10的-45次方</td>
+<td>3.4x10的35次方</td>
+</tr>
+<tr>
+<td>double</td>
+<td>System.Double</td>
+<td>0</td>
+<td>2的53次方</td>
+<td>-1075</td>
+<td>970</td>
+<td>5.0x10的-324次方</td>
+<td>1.7x10的308次方</td>
+</tr>
+<tr>
+<td>decimal</td>
+<td>System.Decimal</td>
+<td>0</td>
+<td>2的96次方</td>
+<td>-26</td>
+<td>0</td>
+<td>1.0x10的-28次方</td>
+<td>7.9x10的28次方</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/" data-id="cjzywvjur000454u8mwlkbacs" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Unity3d-C-格式化字符串" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/31/Unity3d-C-格式化字符串/" class="article-date">
+  <time datetime="2019-08-31T01:14:59.000Z" itemprop="datePublished">2019-08-31</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/31/Unity3d-C-格式化字符串/">Unity3d-C#格式化字符串</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>当利用Write和WriteLine方法输入的时候，可以对字符串进行格式化输出，什么是格式化输出呢？<br>Console.WriteLine(“两个数相加{0}+{1}={2}”,2,3,5);<br>Console.WriteLine(格式字符串(含替代标记)，替换值0，替换值1，替换值2，······);<br> <img src="/2019/08/31/Unity3d-C-格式化字符串/gsh.jpg"></p>
+<p> 多重标记和值<br> <img src="/2019/08/31/Unity3d-C-格式化字符串/2.jpg"><br> <img src="/2019/08/31/Unity3d-C-格式化字符串/3.jpg"><br> <img src="/2019/08/31/Unity3d-C-格式化字符串/Thank.jpg"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/08/31/Unity3d-C-格式化字符串/" data-id="cjzywvjus000554u8f0o6f25m" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Unity-C-关键字不能用来做变量名" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/31/Unity-C-关键字不能用来做变量名/" class="article-date">
+  <time datetime="2019-08-31T00:11:05.000Z" itemprop="datePublished">2019-08-31</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/31/Unity-C-关键字不能用来做变量名/">Unity-C#关键字不能用来做变量名</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <table>
+<thead>
+<tr>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>abstract</td>
+<td>const</td>
+<td>extern</td>
+<td>int</td>
+<td>out</td>
+<td>short</td>
+<td>typeof</td>
+</tr>
+<tr>
+<td>as</td>
+<td>continue</td>
+<td>false</td>
+<td>interface</td>
+<td>override</td>
+<td>sizeof</td>
+<td>uint</td>
+</tr>
+<tr>
+<td>base</td>
+<td>decimal</td>
+<td>finally</td>
+<td>internal</td>
+<td>params</td>
+<td>stackalloc</td>
+<td>long</td>
+</tr>
+<tr>
+<td>bool</td>
+<td>default</td>
+<td>fixed</td>
+<td>is</td>
+<td>private</td>
+<td>static</td>
+<td>unchecked</td>
+</tr>
+<tr>
+<td>break</td>
+<td>delegate</td>
+<td>float</td>
+<td>lock</td>
+<td>protected</td>
+<td>string</td>
+<td>unsafe</td>
+</tr>
+<tr>
+<td>byte</td>
+<td>do</td>
+<td>for</td>
+<td>long</td>
+<td>public</td>
+<td>struct</td>
+<td>ushort</td>
+</tr>
+<tr>
+<td>case</td>
+<td>double</td>
+<td>foreach</td>
+<td>namespace</td>
+<td>readonly</td>
+<td>switch</td>
+<td>using</td>
+</tr>
+<tr>
+<td>catch</td>
+<td>else</td>
+<td>goto</td>
+<td>new</td>
+<td>ref</td>
+<td>this</td>
+<td>virtual</td>
+</tr>
+<tr>
+<td>char</td>
+<td>enum</td>
+<td>if</td>
+<td>null</td>
+<td>retrun</td>
+<td>throw</td>
+<td>void</td>
+</tr>
+<tr>
+<td>checked</td>
+<td>event</td>
+<td>implicit</td>
+<td>object</td>
+<td>sbyte</td>
+<td>true</td>
+<td>volatile</td>
+</tr>
+<tr>
+<td>class</td>
+<td>explicit</td>
+<td>in</td>
+<td>operator</td>
+<td>sealed</td>
+<td>try</td>
+<td>while</td>
+</tr>
+</tbody></table>
+<p>关键字不能被用来做变量名或者其他形式的标识符，除非以@字符开始。<br>所有C#关键字全部由小写字母组成<br> <img src="/2019/08/31/Unity-C-关键字不能用来做变量名/Thank.jpg"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/08/31/Unity-C-关键字不能用来做变量名/" data-id="cjzywvjui000154u8fez7v8x8" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-Unity-C-命名规范" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -110,7 +440,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/30/Unity-C-命名规范/" data-id="cjzxr2oq20000dgu8nl3rb14n" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/30/Unity-C-命名规范/" data-id="cjzywvjub000054u8z0podko3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
@@ -155,7 +485,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/28/Unity-C-编写第一个程序/" data-id="cjzxr2oq80001dgu8dlls2lc4" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/28/Unity-C-编写第一个程序/" data-id="cjzywvjuo000354u83f4saatl" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
@@ -193,7 +523,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/22/测试/" data-id="cjzxr2oqg0005dgu8ztkzmme5" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/22/测试/" data-id="cjzywvjv1000a54u8357flamu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -241,10 +571,50 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/21/Unity3d连接MySql查询数据，在UI显示数据/" data-id="cjzxr2oqc0003dgu8d49uu4y6" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/21/Unity3d连接MySql查询数据，在UI显示数据/" data-id="cjzywvjuv000754u86wbwlc3r" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySql/">MySql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-第一篇文章" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/20/第一篇文章/" class="article-date">
+  <time datetime="2019-08-20T04:06:24.000Z" itemprop="datePublished">2019-08-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/20/第一篇文章/">第一篇文章</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="我的文章"><a href="#我的文章" class="headerlink" title="我的文章"></a>我的文章</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hello world</span><br><span class="line">print(&quot;helloworld&quot;);</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/08/20/第一篇文章/" data-id="cjzywvjv3000c54u8mcv6rhgi" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/unity3D/">unity3D</a></li></ul>
 
     </footer>
   </div>
@@ -283,47 +653,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/20/第三篇文章/" data-id="cjzxr2oqi0007dgu81duqfzhi" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/unity3D/">unity3D</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-第一篇文章" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/08/20/第一篇文章/" class="article-date">
-  <time datetime="2019-08-20T04:06:24.000Z" itemprop="datePublished">2019-08-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/20/第一篇文章/">第一篇文章</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="我的文章"><a href="#我的文章" class="headerlink" title="我的文章"></a>我的文章</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hello world</span><br><span class="line">print(&quot;helloworld&quot;);</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/20/第一篇文章/" data-id="cjzxr2oqk0008dgu8d9l71021" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/20/第三篇文章/" data-id="cjzywvjv7000f54u8xja9gfq2" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/unity3D/">unity3D</a></li></ul>
@@ -364,7 +694,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/20/第二篇文章/" data-id="cjzxr2oqn000adgu8m3fba4g7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/20/第二篇文章/" data-id="cjzywvjv9000g54u8nst5vah4" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/unity3D/">unity3D</a></li></ul>
@@ -376,56 +706,12 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/08/20/hello-world/" class="article-date">
-  <time datetime="2019-08-20T03:51:56.990Z" itemprop="datePublished">2019-08-20</time>
-</a>
+
+
+  <nav id="page-nav">
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/20/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/20/hello-world/" data-id="cjzxr2oqe0004dgu824jm0my1" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+  </nav>
 
 </section>
         
@@ -448,7 +734,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/C/" style="font-size: 20px;">C#</a> <a href="/tags/MySql/" style="font-size: 10px;">MySql</a> <a href="/tags/Unity3d/" style="font-size: 15px;">Unity3d</a> <a href="/tags/unity3D/" style="font-size: 15px;">unity3D</a>
+      <a href="/tags/C/" style="font-size: 20px;">C#</a> <a href="/tags/MySql/" style="font-size: 10px;">MySql</a> <a href="/tags/Unity3d/" style="font-size: 16.67px;">Unity3d</a> <a href="/tags/unity3D/" style="font-size: 13.33px;">unity3D</a>
     </div>
   </div>
 
@@ -470,23 +756,23 @@
       <ul>
         
           <li>
+            <a href="/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/">Unity3d_C#声明变量,给它赋值,并使用它</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/31/Unity3d-C-格式化字符串/">Unity3d-C#格式化字符串</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/31/Unity-C-关键字不能用来做变量名/">Unity-C#关键字不能用来做变量名</a>
+          </li>
+        
+          <li>
             <a href="/2019/08/30/Unity-C-命名规范/">Unity-C#命名规范</a>
           </li>
         
           <li>
             <a href="/2019/08/28/Unity-C-编写第一个程序/">Unity-C#编写第一个程序</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/22/测试/">测试</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/21/Unity3d连接MySql查询数据，在UI显示数据/">Unity3d连接MySql查询数据，在UI显示数据</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/20/第三篇文章/">第三篇文章</a>
           </li>
         
       </ul>
@@ -509,9 +795,9 @@
     </div>
     <nav id="mobile-nav">
   
-    <a href="/" class="mobile-nav-link">Home</a>
+    <a href="/" class="mobile-nav-link">主页</a>
   
-    <a href="/archives" class="mobile-nav-link">Archives</a>
+    <a href="/archives" class="mobile-nav-link">目录</a>
   
 </nav>
     
