@@ -17,7 +17,11 @@
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/1.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/2.jpg">
-<meta property="og:updated_time" content="2019-08-31T07:40:52.789Z">
+<meta property="og:image" content="http://yoursite.com/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/3.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/4.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/5.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/Thank.jpg">
+<meta property="og:updated_time" content="2019-08-31T09:13:29.890Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Unity3d_C#声明变量,给它赋值,并使用它">
 <meta name="twitter:description" content="变量为什么使用变量？计算机程序的运行其实就是对数据的操作，数据有数字、文字、图片这些数据如何在计算机中存储？通过变量，你可以把计算机内存中的变量，当成一个盒子，盒子里面存储着东西，可以放入或者取出。 声明变量需要指定类型和变量名type name;type表示使用什么类型的盒子，来存储数据name表示存储这个盒子的名字实例：(每一个声明都是一条语句，语句以;结束) 123int age;//int">
@@ -94,7 +98,7 @@
 <h2 id="声明变量需要指定类型和变量名"><a href="#声明变量需要指定类型和变量名" class="headerlink" title="声明变量需要指定类型和变量名"></a>声明变量需要指定类型和变量名</h2><p>type name;<br>type表示使用什么类型的盒子，来存储数据<br>name表示存储这个盒子的名字<br>实例：(每一个声明都是一条语句，语句以;结束)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int age;//int整数类型盒子，age是盒子的名字</span><br><span class="line">int hp;</span><br><span class="line">string name;//字符串类型盒子，name是盒子的名字</span><br></pre></td></tr></table></figure>
 
-<img src="/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/1.jpg">
+<h4 id="实例1"><a href="#实例1" class="headerlink" title="实例1"></a>实例1</h4><img src="/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/1.jpg">
 <p>按Ctrl+F5可运行时暂停，或者加多这条语句Console.ReadKey();按F5也可运行时暂停</p>
 <h2 id="变量类型有哪些？"><a href="#变量类型有哪些？" class="headerlink" title="变量类型有哪些？"></a>变量类型有哪些？</h2><h3 id="简单类型-整数"><a href="#简单类型-整数" class="headerlink" title="简单类型-整数"></a>简单类型-整数</h3><table>
 <thead>
@@ -145,7 +149,7 @@
 <td>在0~18446744073709551615之间的整数</td>
 </tr>
 </tbody></table>
-<img src="/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/2.jpg">
+<h4 id="实例2"><a href="#实例2" class="headerlink" title="实例2"></a>实例2</h4><img src="/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/2.jpg">
 <p>根据实际情况来选择合适的类型可节约内存，达到优化效果，比如视频点击量过亿的可以选择long类型；年龄可以选byte类型，年龄一般不超过255，除了史前动物。。</p>
 <h3 id="简单类型-小数"><a href="#简单类型-小数" class="headerlink" title="简单类型-小数"></a>简单类型-小数</h3><table>
 <thead>
@@ -191,11 +195,49 @@
 <td>7.9x10的28次方</td>
 </tr>
 </tbody></table>
+<h4 id="实例3"><a href="#实例3" class="headerlink" title="实例3"></a>实例3</h4><img src="/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/3.jpg">
+
+
+<h3 id="简单类型-非数值类型"><a href="#简单类型-非数值类型" class="headerlink" title="简单类型-非数值类型"></a>简单类型-非数值类型</h3><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>别名</th>
+<th>允许的值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>char</td>
+<td>System.Char</td>
+<td>一个Unicode字符，存储0~65535之间的整数</td>
+</tr>
+<tr>
+<td>bool</td>
+<td>System.Boolean</td>
+<td>布尔值；true成false</td>
+</tr>
+<tr>
+<td>string</td>
+<td>System.String</td>
+<td>一组字符</td>
+</tr>
+</tbody></table>
+<h4 id="实例4"><a href="#实例4" class="headerlink" title="实例4"></a>实例4</h4><img src="/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/4.jpg">
+
+<h4 id="实例5"><a href="#实例5" class="headerlink" title="实例5"></a>实例5</h4><img src="/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/5.jpg">
+
+<h4 id="感谢观看"><a href="#感谢观看" class="headerlink" title="感谢观看"></a>感谢观看</h4><img src="/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/Thank.jpg">
+
+
+
+
+
+
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/" data-id="cjzz917v7000fmku824hzp2bd" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/" data-id="cjzz9eyvo0001dgu8abcum38v" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
