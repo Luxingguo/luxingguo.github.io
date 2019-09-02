@@ -62,6 +62,213 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Unity3d-C-赋值运算符" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/02/Unity3d-C-赋值运算符/" class="article-date">
+  <time datetime="2019-09-02T03:06:13.000Z" itemprop="datePublished">2019-09-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/02/Unity3d-C-赋值运算符/">Unity3d_C#赋值运算符</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h2><table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>类别</th>
+<th>示例表达式</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>=</td>
+<td>二元</td>
+<td>var1=var2;</td>
+<td>var1被赋予var2的值</td>
+</tr>
+<tr>
+<td>+=</td>
+<td>二元</td>
+<td>var1+=var2;</td>
+<td>var1被赋予var1与var2的和</td>
+</tr>
+<tr>
+<td>-=</td>
+<td>二元</td>
+<td>var1-=var2;</td>
+<td>var1被赋予var1与var2的差</td>
+</tr>
+<tr>
+<td>* =</td>
+<td>二元</td>
+<td>var1*=var2;</td>
+<td>var1被赋予var1与var2的乘积</td>
+</tr>
+<tr>
+<td>/=</td>
+<td>二元</td>
+<td>var1/=var2;</td>
+<td>var1被赋予var1与var2相除所得的结果</td>
+</tr>
+<tr>
+<td>%=</td>
+<td>二元</td>
+<td>var1%=var2;</td>
+<td>var1被赋予var1与var2相除所得的余数</td>
+</tr>
+</tbody></table>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"></span><br><span class="line">namespace _11</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;   </span><br><span class="line">            <span class="keyword">int</span> num1 = <span class="number">34</span>;<span class="comment">//这个是最常用 最基本的赋值运算符</span></span><br><span class="line">            num1 += <span class="number">12</span>;  <span class="comment">//相当于num1=num1+12   //此时num1的值是46</span></span><br><span class="line">            num1 -= <span class="number">12</span>;  <span class="comment">//相当于num1=num1-12   //此时num1的值是46-12=34</span></span><br><span class="line">            num1 *= <span class="number">2</span>;   <span class="comment">//相当于num1=num1*2    //此时num1的值是34*2=68</span></span><br><span class="line">            num1 /= <span class="number">2</span>;   <span class="comment">//相当于num1=num1/2    //此时num1的值是68/2=34</span></span><br><span class="line">            num1 %= <span class="number">4</span>;   <span class="comment">//相当于num1=num1%4    //此时num1的值是34%4=2</span></span><br><span class="line">            Console.WriteLine(num1);</span><br><span class="line">            Console.ReadKey();</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/09/02/Unity3d-C-赋值运算符/" data-id="ck01tq8ud000bk4u8o4cm5m1l" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Unity3d-C-接受用户输入的字符串" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/02/Unity3d-C-接受用户输入的字符串/" class="article-date">
+  <time datetime="2019-09-02T01:39:25.000Z" itemprop="datePublished">2019-09-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/02/Unity3d-C-接受用户输入的字符串/">Unity3d_C#接受用户输入的字符串</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="接受用户输入字符串以及将字符串变成整数型和浮点型"><a href="#接受用户输入字符串以及将字符串变成整数型和浮点型" class="headerlink" title="接受用户输入字符串以及将字符串变成整数型和浮点型"></a>接受用户输入字符串以及将字符串变成整数型和浮点型</h2><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"></span><br><span class="line">namespace _009</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//读取用户的输入</span></span><br><span class="line">            <span class="comment">//string str= Console.ReadLine();  //人键盘上读取输入的字符串</span></span><br><span class="line">            <span class="comment">//Console.WriteLine(str);</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">//Convert转型</span></span><br><span class="line">            <span class="comment">//string str = "123";</span></span><br><span class="line">            <span class="comment">//int num=Convert.ToInt32(str);//Convert转型类里面的有个方法可以使整数的字符串转入为整数</span></span><br><span class="line">            <span class="comment">//num++;</span></span><br><span class="line">            <span class="comment">//Console.WriteLine(num);//结果是124</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">//string str = Console.ReadLine();</span></span><br><span class="line">            <span class="comment">//int num = Convert.ToInt32(str);</span></span><br><span class="line">            <span class="comment">//Console.WriteLine(num);</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">string</span> str = Console.ReadLine();</span><br><span class="line">            <span class="keyword">double</span> num = Convert.ToDouble(str);<span class="comment">//将字符串转化为浮点</span></span><br><span class="line">            Console.WriteLine(num);</span><br><span class="line"></span><br><span class="line">            Console.ReadKey();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="接受用户从控制台输入两个数字，并计算和，输出到控制台"><a href="#接受用户从控制台输入两个数字，并计算和，输出到控制台" class="headerlink" title="接受用户从控制台输入两个数字，并计算和，输出到控制台"></a>接受用户从控制台输入两个数字，并计算和，输出到控制台</h2><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"></span><br><span class="line">namespace _10</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">"请输入第一个数字"</span>);</span><br><span class="line">            <span class="keyword">string</span> str1 = Console.ReadLine();</span><br><span class="line">            <span class="keyword">int</span> num1 = Convert.ToInt32(str1);</span><br><span class="line">            Console.WriteLine(<span class="string">"请输入第二个数字"</span>);</span><br><span class="line">            <span class="keyword">string</span> str2 = Console.ReadLine();</span><br><span class="line">            <span class="keyword">int</span> num2 = Convert.ToInt32(str2);</span><br><span class="line">            Console.WriteLine(<span class="string">"两个数字的和为"</span>);</span><br><span class="line">            <span class="keyword">int</span> Sum = num1 + num2;</span><br><span class="line">            Console.WriteLine(Sum);</span><br><span class="line">           </span><br><span class="line">            Console.ReadKey();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/09/02/Unity3d-C-接受用户输入的字符串/" data-id="ck01tq8u70005k4u8nvodt01s" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Unity3d-C-数学运算符" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/01/Unity3d-C-数学运算符/" class="article-date">
+  <time datetime="2019-09-01T13:41:47.000Z" itemprop="datePublished">2019-09-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/01/Unity3d-C-数学运算符/">Unity3d_C#数学运算符</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="数学运算符-加减乘除求余"><a href="#数学运算符-加减乘除求余" class="headerlink" title="数学运算符-加减乘除求余"></a>数学运算符-加减乘除求余</h2><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"></span><br><span class="line">namespace _007</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">int</span> num1 = <span class="number">45</span>;</span><br><span class="line">            <span class="keyword">int</span> num2 = <span class="number">13</span>;</span><br><span class="line">            <span class="keyword">int</span> res1 = num1 + num2;<span class="comment">//加</span></span><br><span class="line">            <span class="keyword">int</span> res2 = num1 - num2;<span class="comment">//减</span></span><br><span class="line">            <span class="keyword">int</span> res3 = num1 * num2;<span class="comment">//乘</span></span><br><span class="line">            <span class="keyword">int</span> res4 = num1 / num2;<span class="comment">//除</span></span><br><span class="line">            <span class="keyword">int</span> res5 = num1 % num2;<span class="comment">//求余</span></span><br><span class="line">            <span class="comment">//加减乘除求余两边的操作数都是整数的话，结果还是整数，不过不能被整除的话，自动略去小数部分</span></span><br><span class="line">            Console.WriteLine(<span class="string">"加法的结果:&#123;0&#125;\n减法的结果:&#123;1&#125;\n乘法的结果:&#123;2&#125;\n除法的结果:&#123;3&#125;\n求余:&#123;4&#125;"</span>,res1,res2,res3,res4,res5);</span><br><span class="line">            Console.ReadKey();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="数学运算符更多的使用"><a href="#数学运算符更多的使用" class="headerlink" title="数学运算符更多的使用"></a>数学运算符更多的使用</h2><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.字符串相加，用来连接两个字符串，返回一个字符串</span></span><br><span class="line"><span class="keyword">string</span> str1 = <span class="string">"123"</span>;</span><br><span class="line"><span class="keyword">string</span> str2 = <span class="string">"Lu"</span>;</span><br><span class="line"><span class="keyword">string</span> str = str1 + str2;</span><br><span class="line">Console.WriteLine(str);<span class="comment">//运算结果是:123Lu</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//2.当一个字符串跟一个数字相加的话，首先把数字转变成字符串，然后连接起来，结果是字符串</span></span><br><span class="line"><span class="keyword">string</span> str01 = <span class="string">"123"</span>;</span><br><span class="line"><span class="keyword">int</span> num01 = <span class="number">456</span>;</span><br><span class="line"><span class="keyword">string</span> res01 = str01 + num01;</span><br><span class="line">Console.WriteLine(res01);<span class="comment">//运算结果是：123456</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="关于数学运算的结果的类型"><a href="#关于数学运算的结果的类型" class="headerlink" title="关于数学运算的结果的类型"></a>关于数学运算的结果的类型</h3><p>当两边的操作数类型一致的时候，返回的结果跟操作数的类型一样<br>当两边的操作数类型不一致的时候，返回的结果跟类型大的操作数保持一致，这样做编译器是为了保证结果可以存的下，因为如果其中有一个类型大的操作数，很可能结果也是一个比较大的数值这样小类型是存不下的。</p>
+<h2 id="数学运算符-自加和自减运算符"><a href="#数学运算符-自加和自减运算符" class="headerlink" title="数学运算符 自加和自减运算符"></a>数学运算符 自加和自减运算符</h2><h3 id="数学运算符"><a href="#数学运算符" class="headerlink" title="数学运算符"></a>数学运算符</h3><table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>类别</th>
+<th>示例表达式</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>++</td>
+<td>一元</td>
+<td>var1=++var2;</td>
+<td>var1的值是var2+1,var2递增1</td>
+</tr>
+<tr>
+<td>–</td>
+<td>一元</td>
+<td>var1=–var2;</td>
+<td>var1的值是var2-1,var2递减1</td>
+</tr>
+<tr>
+<td>++</td>
+<td>一元</td>
+<td>var1=var2++;</td>
+<td>var1的值是var2,var2递增1</td>
+</tr>
+<tr>
+<td>–</td>
+<td>一元</td>
+<td>var1=var2–;</td>
+<td>var1的值是var2,var2递减1</td>
+</tr>
+</tbody></table>
+<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"></span><br><span class="line">namespace _008</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//数学运算符_自加 </span></span><br><span class="line">            <span class="comment">//int num1 = 45;</span></span><br><span class="line">            <span class="comment">//num1++;</span></span><br><span class="line">            <span class="comment">//++num1;    //++不管是放到操作数的前面还是后面，都是让操作数加1</span></span><br><span class="line">            <span class="comment">//int res = num1++;  //res的值=45  num1=46</span></span><br><span class="line">            <span class="comment">//int res = ++num1;    //res的值=46  num1=46</span></span><br><span class="line">            <span class="comment">//如果++放到前面会先进行自增，然后再进行其余的运算；如果放在操作数后面，会先使用操作数进行运算，然后让操作数自增。</span></span><br><span class="line">            <span class="comment">//Console.WriteLine(res+":"+num1);</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">//数学运算符_自减</span></span><br><span class="line">            <span class="keyword">int</span> num1 = <span class="number">45</span>;</span><br><span class="line">            <span class="keyword">int</span> res = num1--; <span class="comment">//res的值是45  num1的值是44</span></span><br><span class="line">            <span class="keyword">int</span> res2 = --num1;<span class="comment">//res2的值是43 num1的值是43</span></span><br><span class="line">            Console.WriteLine(res + <span class="string">":"</span> + res2);</span><br><span class="line">            Console.ReadKey();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/09/01/Unity3d-C-数学运算符/" data-id="ck01tq8u90007k4u859xi5zlf" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-字面值-转义字符" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/08/31/字面值-转义字符/" class="article-date">
@@ -153,13 +360,13 @@
 
 <h1 id="使用-不识别转义字符"><a href="#使用-不识别转义字符" class="headerlink" title="使用@不识别转义字符"></a>使用@不识别转义字符</h1><h3 id="如果我们不想去识别字符串中的转义字符，可以在前面加一个-符号-除了双引号其他转义字符都不在识别"><a href="#如果我们不想去识别字符串中的转义字符，可以在前面加一个-符号-除了双引号其他转义字符都不在识别" class="headerlink" title="如果我们不想去识别字符串中的转义字符，可以在前面加一个@符号(除了双引号其他转义字符都不在识别)"></a>如果我们不想去识别字符串中的转义字符，可以在前面加一个@符号(除了双引号其他转义字符都不在识别)</h3><p>举例：”I’m a good man.\n\v You are bad girl\n”;<br>@字符的两个作用示例：<br>1.默认一个字符串的定义是放在一起的，如果想要占用多行。<br>2.用字符串表示路径<br>“c:\xxx\xx\xxx.doc”<br>使用@”c:\xxx\xx\xxx.doc”更能读懂</p>
 <h2 id="实例-1"><a href="#实例-1" class="headerlink" title="实例"></a>实例</h2><img src="/2019/08/31/字面值-转义字符/2.jpg">
-
+<p>如果需要加双引号的话，即在前面有@的情况下两个双引号代表一个双引号。<br>@””=”</p>
 <h4 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h4><img src="/2019/08/31/字面值-转义字符/Thank.jpg">
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/31/字面值-转义字符/" data-id="cjzzl2yrk000an8u821p7ffqs" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/31/字面值-转义字符/" data-id="ck01tq8ul000ik4u82v20cudr" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
@@ -325,6 +532,10 @@
 
 <h4 id="实例5"><a href="#实例5" class="headerlink" title="实例5"></a>实例5</h4><img src="/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/5.jpg">
 
+<h2 id="多变量声明和赋值"><a href="#多变量声明和赋值" class="headerlink" title="多变量声明和赋值"></a>多变量声明和赋值</h2><p>我们可以使用一条语句声明多个类型一样的变量<br>string name1,name2;<br>在多变量声明中，可以在变量后面跟上=，对其中的一个变量或者部分或者全部变量进行初始化</p>
+<h3 id="变量在使用之前必须初始化"><a href="#变量在使用之前必须初始化" class="headerlink" title="变量在使用之前必须初始化"></a>变量在使用之前必须初始化</h3><p>怎么判断变量有没有使用，当你从变量的盒子里面取东西的时候<br>就是要使用这个变量的时候，初始化就是先往这个盒子里面放入东西，才能去取</p>
+<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"></span><br><span class="line">namespace _006_变量的声明和赋值</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//Ctrl+K然后Ctrl+C这是一个组合快捷键可以注释选中行</span></span><br><span class="line">            <span class="comment">//Ctrl+K然后Ctrl+U取消注释选中行</span></span><br><span class="line">            <span class="comment">//变量在使用之前必须初始化</span></span><br><span class="line">            <span class="keyword">int</span> age=<span class="number">20</span>;<span class="comment">//第一次给变量赋值，就叫做初始化</span></span><br><span class="line">            age = <span class="number">25</span>;<span class="comment">//后面都是赋值</span></span><br><span class="line">            <span class="keyword">int</span> hp, mp=<span class="number">90</span>, exp=<span class="number">80</span>;</span><br><span class="line">            hp = <span class="number">100</span>;</span><br><span class="line">            Console.WriteLine(hp);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
 
 <h4 id="感谢观看"><a href="#感谢观看" class="headerlink" title="感谢观看"></a>感谢观看</h4><img src="/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/Thank.jpg">
@@ -338,7 +549,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/" data-id="cjzzl2yrd0005n8u8n9fyvdyd" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/" data-id="ck01tq8u60004k4u8vupg0hlo" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
@@ -378,7 +589,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/31/Unity3d-C-格式化字符串/" data-id="cjzzl2yrb0004n8u8fkxozrdn" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/31/Unity3d-C-格式化字符串/" data-id="ck01tq8ua0008k4u8lqu9mg4c" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
@@ -529,7 +740,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/31/Unity-C-关键字不能用来做变量名/" data-id="cjzzl2yr00000n8u8a8z3ckmm" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/31/Unity-C-关键字不能用来做变量名/" data-id="ck01tq8tu0000k4u89wrdofeh" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
@@ -589,7 +800,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/30/Unity-C-命名规范/" data-id="cjzzl2yr50001n8u8xkuak0q7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/30/Unity-C-命名规范/" data-id="ck01tq8u50003k4u8j84atae9" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
@@ -633,7 +844,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/28/Unity-C-编写第一个程序/" data-id="cjzzl2yra0003n8u8o0puhr0m" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/28/Unity-C-编写第一个程序/" data-id="ck01tq8u00001k4u8slorqsyw" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
@@ -671,139 +882,9 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/22/测试/" data-id="cjzzl2yrm000cn8u8mbi7sm7x" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/22/测试/" data-id="ck01tq8uo000lk4u8qle6j6n7" class="article-share-link">Share</a>
       
       
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Unity3d连接MySql查询数据，在UI显示数据" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/08/21/Unity3d连接MySql查询数据，在UI显示数据/" class="article-date">
-  <time datetime="2019-08-21T09:50:17.000Z" itemprop="datePublished">2019-08-21</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/21/Unity3d连接MySql查询数据，在UI显示数据/">Unity3d连接MySql查询数据，在UI显示数据</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>Unity3d通过连接MySql可以查询自己想要的数据，并在UI中显示。<br>需要用到的软件：<br>（1）Unity3d 2019.3.0a8<br>（2）Visual Studio 2017<br>（3）MySQL Server 5.7<br>（4）Navicat Premium</p>
-<p>若没有安装软件的小伙伴可以到官网下载：<br>（1）和（2）<a href="https://unity.cn" target="_blank" rel="noopener">https://unity.cn</a> 安装的Unity3d的时候会连着安装Visual Studio 2017<br>(3)<a href="https://dev.mysql.com/downloads/windows/installer/8.0.html" target="_blank" rel="noopener">https://dev.mysql.com/downloads/windows/installer/8.0.html</a> 向下滑动<img src="/2019/08/21/Unity3d连接MySql查询数据，在UI显示数据/mysql.jpg"><br>(4)<a href="https://www.navicat.com.cn/store/navicat-premium" target="_blank" rel="noopener">https://www.navicat.com.cn/store/navicat-premium</a></p>
-<h2 id="制作步骤"><a href="#制作步骤" class="headerlink" title="制作步骤"></a>制作步骤</h2><p>（1）使用Navicat Premium新建一个MySql文件，新建数据库命名为test,新建jiudian_table表格</p>
-<img src="/2019/08/21/Unity3d连接MySql查询数据，在UI显示数据/jiudian_table.jpg">
-<p>（2）打开Unity3d，导入MySql包</p>
-<img src="/2019/08/21/Unity3d连接MySql查询数据，在UI显示数据/mysqldata.jpg">
-<p>（3）右击创建Canvas-创建空物体-在空物体下面新建Text文本，将Text文本做成预制体<br>（4）打开Visual Studio 2017输入代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">using System.Collections;</span><br><span class="line">using System.Collections.Generic;</span><br><span class="line">using UnityEngine;</span><br><span class="line">using UnityEngine.UI;</span><br><span class="line">using MySql.Data.MySqlClient;</span><br><span class="line">using System.Data;</span><br><span class="line"></span><br><span class="line"> public GameObject plan;//生成地方</span><br><span class="line"> public GameObject obj;//生成对象</span><br><span class="line"> void Start()</span><br><span class="line">    &#123;       </span><br><span class="line">        Jiud();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">      void Jiud()</span><br><span class="line">    &#123;</span><br><span class="line">        MySqlDataReader reader = DBtest.ins.Query($&quot;select * from jiudian_table&quot;);</span><br><span class="line">        while (reader.Read())</span><br><span class="line">        &#123;</span><br><span class="line">            string name= reader.GetString(1);            </span><br><span class="line">            GameObject go = Instantiate(obj, plan.transform);//实例化=对象，生成位置</span><br><span class="line">            go.transform.Find(&quot;Text&quot;).GetComponent&lt;Text&gt;().text = name;//获取Plan下的Text文本    </span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        reader.Close();</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<p>效果如下图所示</p>
-<img src="/2019/08/21/Unity3d连接MySql查询数据，在UI显示数据/xiaoguo.jpg">
-<h5 id="总结：若有改进的地方或不对的地方，请多多海涵和指教。若想深入学习和指教请加我扣扣：1446846475，一起来学习哈"><a href="#总结：若有改进的地方或不对的地方，请多多海涵和指教。若想深入学习和指教请加我扣扣：1446846475，一起来学习哈" class="headerlink" title="总结：若有改进的地方或不对的地方，请多多海涵和指教。若想深入学习和指教请加我扣扣：1446846475，一起来学习哈~"></a>总结：若有改进的地方或不对的地方，请多多海涵和指教。若想深入学习和指教请加我扣扣：1446846475，一起来学习哈~</h5>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/21/Unity3d连接MySql查询数据，在UI显示数据/" data-id="cjzzl2yrf0007n8u8tguh8v0g" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySql/">MySql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-第二篇文章" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/08/20/第二篇文章/" class="article-date">
-  <time datetime="2019-08-20T04:06:24.000Z" itemprop="datePublished">2019-08-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/20/第二篇文章/">第二篇文章</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="我的文章"><a href="#我的文章" class="headerlink" title="我的文章"></a>我的文章</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hello world</span><br><span class="line">print(&quot;helloworld&quot;);</span><br><span class="line">工工工工工工工工工工工工工工工工工工工工工工</span><br></pre></td></tr></table></figure>
-
-<p>表格插入<br>ABCD | EFGH | IGKL<br>—–|——|—-<br>a | b | c<br>d | e | f<br>g | h | i</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/20/第二篇文章/" data-id="cjzzl2ys90012n8u8oy5h1j9o" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/unity3D/">unity3D</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-第一篇文章" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/08/20/第一篇文章/" class="article-date">
-  <time datetime="2019-08-20T04:06:24.000Z" itemprop="datePublished">2019-08-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/20/第一篇文章/">第一篇文章</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="我的文章"><a href="#我的文章" class="headerlink" title="我的文章"></a>我的文章</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hello world</span><br><span class="line">print(&quot;helloworld&quot;);</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/20/第一篇文章/" data-id="cjzzl2yrp000fn8u8nz0fbtke" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/unity3D/">unity3D</a></li></ul>
-
     </footer>
   </div>
   
@@ -848,7 +929,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li></ul>
     </div>
   </div>
 
@@ -861,23 +942,23 @@
       <ul>
         
           <li>
+            <a href="/2019/09/02/Unity3d-C-赋值运算符/">Unity3d_C#赋值运算符</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/02/Unity3d-C-接受用户输入的字符串/">Unity3d_C#接受用户输入的字符串</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/01/Unity3d-C-数学运算符/">Unity3d_C#数学运算符</a>
+          </li>
+        
+          <li>
             <a href="/2019/08/31/字面值-转义字符/">Unity3d_C#字面值_转义字符</a>
           </li>
         
           <li>
             <a href="/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/">Unity3d_C#声明变量,给它赋值,并使用它</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/31/Unity3d-C-格式化字符串/">Unity3d-C#格式化字符串</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/31/Unity-C-关键字不能用来做变量名/">Unity-C#关键字不能用来做变量名</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/30/Unity-C-命名规范/">Unity-C#命名规范</a>
           </li>
         
       </ul>

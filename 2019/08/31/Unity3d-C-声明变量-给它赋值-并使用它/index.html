@@ -21,7 +21,7 @@
 <meta property="og:image" content="http://yoursite.com/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/4.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/5.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/Thank.jpg">
-<meta property="og:updated_time" content="2019-08-31T12:35:42.768Z">
+<meta property="og:updated_time" content="2019-09-01T00:46:52.521Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Unity3d_C#声明变量,给它赋值,并使用它">
 <meta name="twitter:description" content="变量为什么使用变量？计算机程序的运行其实就是对数据的操作，数据有数字、文字、图片这些数据如何在计算机中存储？通过变量，你可以把计算机内存中的变量，当成一个盒子，盒子里面存储着东西，可以放入或者取出。 声明变量需要指定类型和变量名type name;type表示使用什么类型的盒子，来存储数据name表示存储这个盒子的名字实例：(每一个声明都是一条语句，语句以;结束) 123int age;//int">
@@ -226,6 +226,10 @@
 
 <h4 id="实例5"><a href="#实例5" class="headerlink" title="实例5"></a>实例5</h4><img src="/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/5.jpg">
 
+<h2 id="多变量声明和赋值"><a href="#多变量声明和赋值" class="headerlink" title="多变量声明和赋值"></a>多变量声明和赋值</h2><p>我们可以使用一条语句声明多个类型一样的变量<br>string name1,name2;<br>在多变量声明中，可以在变量后面跟上=，对其中的一个变量或者部分或者全部变量进行初始化</p>
+<h3 id="变量在使用之前必须初始化"><a href="#变量在使用之前必须初始化" class="headerlink" title="变量在使用之前必须初始化"></a>变量在使用之前必须初始化</h3><p>怎么判断变量有没有使用，当你从变量的盒子里面取东西的时候<br>就是要使用这个变量的时候，初始化就是先往这个盒子里面放入东西，才能去取</p>
+<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"></span><br><span class="line">namespace _006_变量的声明和赋值</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//Ctrl+K然后Ctrl+C这是一个组合快捷键可以注释选中行</span></span><br><span class="line">            <span class="comment">//Ctrl+K然后Ctrl+U取消注释选中行</span></span><br><span class="line">            <span class="comment">//变量在使用之前必须初始化</span></span><br><span class="line">            <span class="keyword">int</span> age=<span class="number">20</span>;<span class="comment">//第一次给变量赋值，就叫做初始化</span></span><br><span class="line">            age = <span class="number">25</span>;<span class="comment">//后面都是赋值</span></span><br><span class="line">            <span class="keyword">int</span> hp, mp=<span class="number">90</span>, exp=<span class="number">80</span>;</span><br><span class="line">            hp = <span class="number">100</span>;</span><br><span class="line">            Console.WriteLine(hp);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
 
 <h4 id="感谢观看"><a href="#感谢观看" class="headerlink" title="感谢观看"></a>感谢观看</h4><img src="/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/Thank.jpg">
@@ -239,7 +243,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/" data-id="cjzzl2yrd0005n8u8n9fyvdyd" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/" data-id="ck01tq8u60004k4u8vupg0hlo" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
@@ -300,7 +304,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li></ul>
     </div>
   </div>
 
@@ -313,23 +317,23 @@
       <ul>
         
           <li>
+            <a href="/2019/09/02/Unity3d-C-赋值运算符/">Unity3d_C#赋值运算符</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/02/Unity3d-C-接受用户输入的字符串/">Unity3d_C#接受用户输入的字符串</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/01/Unity3d-C-数学运算符/">Unity3d_C#数学运算符</a>
+          </li>
+        
+          <li>
             <a href="/2019/08/31/字面值-转义字符/">Unity3d_C#字面值_转义字符</a>
           </li>
         
           <li>
             <a href="/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/">Unity3d_C#声明变量,给它赋值,并使用它</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/31/Unity3d-C-格式化字符串/">Unity3d-C#格式化字符串</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/31/Unity-C-关键字不能用来做变量名/">Unity-C#关键字不能用来做变量名</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/30/Unity-C-命名规范/">Unity-C#命名规范</a>
           </li>
         
       </ul>
