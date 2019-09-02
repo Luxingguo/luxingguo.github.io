@@ -62,6 +62,277 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-C-条件布尔运算符和取反运算符" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/02/C-条件布尔运算符和取反运算符/" class="article-date">
+  <time datetime="2019-09-02T12:45:07.000Z" itemprop="datePublished">2019-09-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/02/C-条件布尔运算符和取反运算符/">C#条件布尔运算符</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="布尔运算符-处理布尔值"><a href="#布尔运算符-处理布尔值" class="headerlink" title="布尔运算符-处理布尔值"></a>布尔运算符-处理布尔值</h2><table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>类别</th>
+<th>示例表达式</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>！</td>
+<td>一元</td>
+<td>var1=!var2;</td>
+<td>如果var2是false,varl的值是true，否则为false(逻辑非)</td>
+</tr>
+<tr>
+<td>&amp;</td>
+<td>二元</td>
+<td>var1=var2 &amp; var3;</td>
+<td>如果var2和var3都是true,var1的值就是true，否则为false(逻辑与)</td>
+</tr>
+<tr>
+<td>l</td>
+<td>二元</td>
+<td>var1=var2 l var3;</td>
+<td>如果var2或var3是true(或两者都是)，var1的值就是true,否则为fale(逻辑或)</td>
+</tr>
+<tr>
+<td>^</td>
+<td>二元</td>
+<td>var1=var2 ^ var3;</td>
+<td>如果var2或var3中有且仅有一个是true，var1的值就是true，否则为false(逻辑异或)</td>
+</tr>
+</tbody></table>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"></span><br><span class="line">namespace _17</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">             <span class="comment">//条件布尔运算符</span></span><br><span class="line">            <span class="keyword">bool</span> var1 = <span class="literal">true</span>;</span><br><span class="line">            <span class="keyword">bool</span> var2 = <span class="literal">false</span>;</span><br><span class="line">            <span class="keyword">bool</span> res =!var1;<span class="comment">//！是取反操作，当var为true的时候，返回false,当var1为false的时候，var返回true</span></span><br><span class="line">            <span class="keyword">bool</span> res1 = var1 &amp; var2;<span class="comment">//false</span></span><br><span class="line">            <span class="keyword">bool</span> res2 = var1 | var2;<span class="comment">//true</span></span><br><span class="line">            <span class="keyword">bool</span> res3 = var1 ^ var2;<span class="comment">//true</span></span><br><span class="line">            Console.WriteLine(res);</span><br><span class="line">            Console.WriteLine(res1);</span><br><span class="line">            Console.WriteLine(res2);</span><br><span class="line">            Console.WriteLine(res3);</span><br><span class="line"></span><br><span class="line">            Console.ReadKey();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="条件布尔运算符"><a href="#条件布尔运算符" class="headerlink" title="条件布尔运算符"></a>条件布尔运算符</h2><table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>类别</th>
+<th>示例表达式</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&amp;&amp;</td>
+<td>二元</td>
+<td>var1=var2 &amp;&amp; var3;</td>
+<td>如果var2和var3都是true,var1的值就是true，否则为false(逻辑与)</td>
+</tr>
+<tr>
+<td>ll</td>
+<td>二元</td>
+<td>var1=var2 ll var3;</td>
+<td>如果var2或var3是true(或两者都是)，var1的值就是true,否则为fale(逻辑或)</td>
+</tr>
+</tbody></table>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">bool</span> var1 = <span class="literal">true</span>;</span><br><span class="line"><span class="keyword">bool</span> var2 = <span class="literal">false</span>;</span><br><span class="line"><span class="keyword">bool</span> res = var1 &amp;&amp; var2;<span class="comment">//false;&amp;&amp;而且 和单个&amp;功能一样</span></span><br><span class="line"><span class="keyword">bool</span> res1 = var1 || var2;<span class="comment">//true || 或  和单个|功能一样</span></span><br><span class="line">Console.WriteLine(res);</span><br><span class="line">Console.WriteLine(res1);</span><br><span class="line">Console.ReadKey();</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/09/02/C-条件布尔运算符和取反运算符/" data-id="ck02ecxao0000fku8k2ueceft" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-C-布尔运算符" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/02/C-布尔运算符/" class="article-date">
+  <time datetime="2019-09-02T12:27:49.000Z" itemprop="datePublished">2019-09-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/02/C-布尔运算符/">C#布尔运算符</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##布尔运算符</p>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>类别</th>
+<th>示例表达式</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>==</td>
+<td>二元</td>
+<td>var1=var2==var3;</td>
+<td>如果var2等于var3,var1的值就是true,否则为false</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>二元</td>
+<td>var1=var2!=var3;</td>
+<td>如果var2不等于var3,var1的值就是true,否则为false</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>二元</td>
+<td>var1=var2 &lt; var3;</td>
+<td>如果var2小于var3，var1的值就是true,否则为false</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>二元</td>
+<td>var1=var2&gt;var3;</td>
+<td>如果var2大于var3,var1的值就是true,否则为false</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>二元</td>
+<td>var1=var2&lt;=var3;</td>
+<td>如果var2小于等于var3，var1的值就是true,否则为false</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>二元</td>
+<td>var1=var2&gt;=var3;</td>
+<td>如果var2大于等于var3,var1的值就是true,否则为false</td>
+</tr>
+</tbody></table>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"></span><br><span class="line">namespace _16</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//布尔运算的大于等于</span></span><br><span class="line">            <span class="comment">//int score = 99;</span></span><br><span class="line">            <span class="comment">//bool res=score &gt;= 50;//在这里&gt;=就是一个比较运算符，用来比较score是否大于等于50，如果是的话返回true,否则返回false</span></span><br><span class="line">            <span class="comment">//Console.WriteLine(res);</span></span><br><span class="line">            </span><br><span class="line"></span><br><span class="line">            <span class="keyword">int</span> num1 = <span class="number">34</span>;</span><br><span class="line">            <span class="keyword">int</span> num2 = <span class="number">55</span>;</span><br><span class="line">            <span class="keyword">bool</span> res1 = num1 == num2;<span class="comment">//判断num1和num2是否相等，结果是false</span></span><br><span class="line">            <span class="keyword">bool</span> res2 = num1 != num2;<span class="comment">//true</span></span><br><span class="line">            <span class="keyword">bool</span> res3 = num1 &lt; num2;<span class="comment">//true</span></span><br><span class="line">            <span class="keyword">bool</span> res4 = num1 &gt; num2;<span class="comment">//false</span></span><br><span class="line">            <span class="keyword">bool</span> res5 = num1 &lt;= num2;<span class="comment">//true</span></span><br><span class="line">            <span class="keyword">bool</span> res6 = num1 &gt;= num2;<span class="comment">//false</span></span><br><span class="line">            Console.WriteLine(res1);</span><br><span class="line">            Console.WriteLine(res2);</span><br><span class="line">            Console.WriteLine(res3);</span><br><span class="line">            Console.WriteLine(res4);</span><br><span class="line">            Console.WriteLine(res5);</span><br><span class="line">            Console.WriteLine(res6);</span><br><span class="line">            Console.ReadKey();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/09/02/C-布尔运算符/" data-id="ck02ecxat0001fku8m8wswvm4" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-C-算法小练习" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/02/C-算法小练习/" class="article-date">
+  <time datetime="2019-09-02T11:50:56.000Z" itemprop="datePublished">2019-09-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/02/C-算法小练习/">C#算法小练习</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="练习1编写一个控制台应用程序，要求用户输入4个Int值，并显示他们的乘积"><a href="#练习1编写一个控制台应用程序，要求用户输入4个Int值，并显示他们的乘积" class="headerlink" title="练习1编写一个控制台应用程序，要求用户输入4个Int值，并显示他们的乘积"></a>练习1编写一个控制台应用程序，要求用户输入4个Int值，并显示他们的乘积</h2><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"></span><br><span class="line">namespace _14</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            编写一个控制台应用程序，要求用户输入<span class="number">4</span>个Int值，并显示他们的乘积</span><br><span class="line">            <span class="keyword">string</span> str = Console.ReadLine();</span><br><span class="line">            <span class="keyword">int</span> num = Convert.ToInt32(str);</span><br><span class="line">            <span class="keyword">string</span> str2 = Console.ReadLine();</span><br><span class="line">            <span class="keyword">int</span> num2 = Convert.ToInt32(str2);</span><br><span class="line">            <span class="keyword">string</span> str3 = Console.ReadLine();</span><br><span class="line">            <span class="keyword">int</span> num3 = Convert.ToInt32(str3);</span><br><span class="line">            <span class="keyword">string</span> str4 = Console.ReadLine();</span><br><span class="line">            <span class="keyword">int</span> num4 = Convert.ToInt32(str4);</span><br><span class="line">            <span class="keyword">int</span> res = num * num2 * num3 * num4;</span><br><span class="line">            Console.WriteLine(res);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习2从键盘输入一个三位的正整数，按个十百位的顺序输出-也就是相反顺序，比如输入123，输出是321"><a href="#练习2从键盘输入一个三位的正整数，按个十百位的顺序输出-也就是相反顺序，比如输入123，输出是321" class="headerlink" title="练习2从键盘输入一个三位的正整数，按个十百位的顺序输出 也就是相反顺序，比如输入123，输出是321"></a>练习2从键盘输入一个三位的正整数，按个十百位的顺序输出 也就是相反顺序，比如输入123，输出是321</h2><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"></span><br><span class="line">namespace _14</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">string</span> str = Console.ReadLine();</span><br><span class="line">            <span class="keyword">int</span> num1 = Convert.ToInt32(str);</span><br><span class="line">            <span class="keyword">int</span> ge = num1%<span class="number">10</span>; <span class="comment">//一个数字跟10求余得到是这个数字的个分位</span></span><br><span class="line">            <span class="keyword">int</span> shi=(num1 / <span class="number">10</span>) % <span class="number">10</span>;<span class="comment">//一个数字跟10相除的话，相当于去年这个数字的个分位（abc/10=ab）</span></span><br><span class="line">            <span class="keyword">int</span> bai = num1 / <span class="number">100</span>;</span><br><span class="line">            Console.WriteLine(ge + <span class="string">""</span> + shi + <span class="string">""</span> + bai);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习3编写一个程序，输入梯形的上底-下底-和高，计算机出来梯形的面积并显示出来。"><a href="#练习3编写一个程序，输入梯形的上底-下底-和高，计算机出来梯形的面积并显示出来。" class="headerlink" title="练习3编写一个程序，输入梯形的上底 下底 和高，计算机出来梯形的面积并显示出来。"></a>练习3编写一个程序，输入梯形的上底 下底 和高，计算机出来梯形的面积并显示出来。</h2><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"></span><br><span class="line">namespace _14</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//梯形的面积（上底+下底）*高/2</span></span><br><span class="line">            Console.WriteLine(<span class="string">"请输入上底"</span>);</span><br><span class="line">            <span class="keyword">string</span> str = Console.ReadLine();</span><br><span class="line">            <span class="keyword">double</span> num1 = Convert.ToDouble(str);</span><br><span class="line">            Console.WriteLine(<span class="string">"请输入上底"</span>);</span><br><span class="line">            <span class="keyword">string</span> str2 = Console.ReadLine();</span><br><span class="line">            <span class="keyword">double</span> num2 = Convert.ToDouble(str2);</span><br><span class="line">            Console.WriteLine(<span class="string">"请输入高"</span>);</span><br><span class="line">            <span class="keyword">string</span> str3 = Console.ReadLine();</span><br><span class="line">            <span class="keyword">double</span> num3 = Convert.ToDouble(str3);</span><br><span class="line">            Console.WriteLine(<span class="string">"梯形的面积是："</span>);</span><br><span class="line">            <span class="keyword">double</span> res = (num1 + num2) * num3 / <span class="number">2</span>;</span><br><span class="line">            Console.WriteLine(res);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习4计算半径为n的圆的周长和面积"><a href="#练习4计算半径为n的圆的周长和面积" class="headerlink" title="练习4计算半径为n的圆的周长和面积"></a>练习4计算半径为n的圆的周长和面积</h2><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"></span><br><span class="line">namespace _14</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment"><span class="doctag">///</span>周长=2n*PI   面积PI*n*n</span></span><br><span class="line">            Console.WriteLine(<span class="string">"请输入圆的半径"</span>);</span><br><span class="line">            <span class="keyword">string</span> str = Console.ReadLine();</span><br><span class="line">            <span class="keyword">double</span> n = Convert.ToDouble(str);</span><br><span class="line">            Console.WriteLine(<span class="string">"圆的周长是："</span> + (<span class="number">2</span> * n * <span class="number">3.14</span>));</span><br><span class="line">            Console.WriteLine(<span class="string">"圆的面积是："</span> + (n * n * <span class="number">3.14</span>));</span><br><span class="line">            Console.ReadKey();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/09/02/C-算法小练习/" data-id="ck02ecxay0004fku8e1crr987" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Unity3d-C-运算符的优先级" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/02/Unity3d-C-运算符的优先级/" class="article-date">
+  <time datetime="2019-09-02T03:19:14.000Z" itemprop="datePublished">2019-09-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/02/Unity3d-C-运算符的优先级/">Unity3d_C#运算符的优先级</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="运算符的优先级"><a href="#运算符的优先级" class="headerlink" title="运算符的优先级"></a>运算符的优先级</h2><p>var1=var2+var3;<br>var=var2+var3<em>var4;<br>var=(var2+var3)</em>var4;</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"></span><br><span class="line">namespace _12</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">int</span> num = <span class="number">12</span> + <span class="number">90</span>;</span><br><span class="line">            <span class="keyword">int</span> num1 = <span class="number">12</span> + <span class="number">90</span>*<span class="number">2</span>/<span class="number">4</span>%<span class="number">4</span>;<span class="comment">//在程序中的表达式中，运算符是有优先级的，先进行优先级高的运算符的运算</span></span><br><span class="line">            <span class="keyword">int</span> num2 = (<span class="number">12</span> + <span class="number">90</span>) * <span class="number">2</span>;<span class="comment">//我们可以通过(括号)来改变运算符的优先级，（）内的运算总是最先执行</span></span><br><span class="line">            Console.WriteLine(num);</span><br><span class="line">            Console.WriteLine(num1);</span><br><span class="line">            Console.WriteLine(num2);</span><br><span class="line">            Console.ReadKey();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>括号可以用来重写优先级 括号内的优先级最高 </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/09/02/Unity3d-C-运算符的优先级/" data-id="ck02ecxbg000mfku8pp2dqkzo" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Unity3d-C-赋值运算符" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/09/02/Unity3d-C-赋值运算符/" class="article-date">
@@ -136,7 +407,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/02/Unity3d-C-赋值运算符/" data-id="ck01u2uat0008kou83nya5wyy" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/09/02/Unity3d-C-赋值运算符/" data-id="ck02ecxbd000jfku88wf5te83" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
@@ -178,7 +449,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/02/Unity3d-C-接受用户输入的字符串/" data-id="ck01u2uap0005kou8677s620k" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/09/02/Unity3d-C-接受用户输入的字符串/" data-id="ck02ecxb6000dfku8e4ykso3d" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
@@ -257,7 +528,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/01/Unity3d-C-数学运算符/" data-id="ck01u2uar0007kou8crpgdon1" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/09/01/Unity3d-C-数学运算符/" data-id="ck02ecxb8000efku849cjkyr5" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
@@ -366,7 +637,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/31/字面值-转义字符/" data-id="ck01u2ub1000gkou87gnm6d0u" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/31/字面值-转义字符/" data-id="ck02ecxbm000tfku8f0gusbqk" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
@@ -549,7 +820,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/" data-id="ck01u2uao0004kou84gka9k0e" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/" data-id="ck02ecxb4000afku8s9s66oo3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
@@ -589,302 +860,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/31/Unity3d-C-格式化字符串/" data-id="ck01u2uaw000bkou874yrs71o" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/31/Unity3d-C-格式化字符串/" data-id="ck02ecxbb000hfku843961fz9" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Unity-C-关键字不能用来做变量名" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/08/31/Unity-C-关键字不能用来做变量名/" class="article-date">
-  <time datetime="2019-08-31T00:11:05.000Z" itemprop="datePublished">2019-08-31</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/31/Unity-C-关键字不能用来做变量名/">Unity-C#关键字不能用来做变量名</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <table>
-<thead>
-<tr>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-<th>4</th>
-<th>5</th>
-<th>6</th>
-<th>7</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>abstract</td>
-<td>const</td>
-<td>extern</td>
-<td>int</td>
-<td>out</td>
-<td>short</td>
-<td>typeof</td>
-</tr>
-<tr>
-<td>as</td>
-<td>continue</td>
-<td>false</td>
-<td>interface</td>
-<td>override</td>
-<td>sizeof</td>
-<td>uint</td>
-</tr>
-<tr>
-<td>base</td>
-<td>decimal</td>
-<td>finally</td>
-<td>internal</td>
-<td>params</td>
-<td>stackalloc</td>
-<td>long</td>
-</tr>
-<tr>
-<td>bool</td>
-<td>default</td>
-<td>fixed</td>
-<td>is</td>
-<td>private</td>
-<td>static</td>
-<td>unchecked</td>
-</tr>
-<tr>
-<td>break</td>
-<td>delegate</td>
-<td>float</td>
-<td>lock</td>
-<td>protected</td>
-<td>string</td>
-<td>unsafe</td>
-</tr>
-<tr>
-<td>byte</td>
-<td>do</td>
-<td>for</td>
-<td>long</td>
-<td>public</td>
-<td>struct</td>
-<td>ushort</td>
-</tr>
-<tr>
-<td>case</td>
-<td>double</td>
-<td>foreach</td>
-<td>namespace</td>
-<td>readonly</td>
-<td>switch</td>
-<td>using</td>
-</tr>
-<tr>
-<td>catch</td>
-<td>else</td>
-<td>goto</td>
-<td>new</td>
-<td>ref</td>
-<td>this</td>
-<td>virtual</td>
-</tr>
-<tr>
-<td>char</td>
-<td>enum</td>
-<td>if</td>
-<td>null</td>
-<td>retrun</td>
-<td>throw</td>
-<td>void</td>
-</tr>
-<tr>
-<td>checked</td>
-<td>event</td>
-<td>implicit</td>
-<td>object</td>
-<td>sbyte</td>
-<td>true</td>
-<td>volatile</td>
-</tr>
-<tr>
-<td>class</td>
-<td>explicit</td>
-<td>in</td>
-<td>operator</td>
-<td>sealed</td>
-<td>try</td>
-<td>while</td>
-</tr>
-</tbody></table>
-<p>关键字不能被用来做变量名或者其他形式的标识符，除非以@字符开始。<br>所有C#关键字全部由小写字母组成<br> <img src="/2019/08/31/Unity-C-关键字不能用来做变量名/Thank.jpg"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/31/Unity-C-关键字不能用来做变量名/" data-id="ck01u2uaj0001kou8jgedz38i" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Unity-C-命名规范" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/08/30/Unity-C-命名规范/" class="article-date">
-  <time datetime="2019-08-30T01:58:32.000Z" itemprop="datePublished">2019-08-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/30/Unity-C-命名规范/">Unity-C#命名规范</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>标识符是一种字符串，用来命名如变量方法、参数和程序结构等。</p>
-<p>命名组成=首字符+后续字符</p>
-<table>
-<thead>
-<tr>
-<th>空</th>
-<th>首字符</th>
-<th>后续字符</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>允许</td>
-<td>a-z, A-Z, _,  @</td>
-<td>a-z, A-Z, _, 0-9</td>
-</tr>
-<tr>
-<td>不允许</td>
-<td>0-9</td>
-<td>@</td>
-</tr>
-</tbody></table>
-<p>1.字母 下划线 可以用在任何位置<br>2.数字不能放在首位<br>3.@字符只能放在标识符的首位<br> <img src="/2019/08/30/Unity-C-命名规范/Thank.jpg"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/30/Unity-C-命名规范/" data-id="ck01u2uae0000kou8ccq2ss6u" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Unity-C-编写第一个程序" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/08/28/Unity-C-编写第一个程序/" class="article-date">
-  <time datetime="2019-08-28T00:39:08.000Z" itemprop="datePublished">2019-08-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/28/Unity-C-编写第一个程序/">Unity-C#编写第一个程序</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="我的文章"><a href="#我的文章" class="headerlink" title="我的文章"></a>我的文章</h1><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>1：打开Visual Studio<br>2：文件-新建-项目-Visual C#-控制台应用<br>3：名称命名为：01学习VS（命名支持中文英文,但不能包含的字符有：;(/？：&amp;*“&lt;&gt;|#%;;)），位置可任意放到其他D盘，然后点确定<br>4：按照以下代码写</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"></span><br><span class="line">namespace _01学习VS</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">"Hello world"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>5.按Ctrl+F5弹出命令控制台，你会看到输入的代码Hello world</p>
-<img src="/2019/08/28/Unity-C-编写第一个程序/01.jpg">
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>刚开始学习编程的时候先不要问为什么，先模仿着来做，多练习，等累积到一定的经验之后再回首来看以往的问题即可迎刃而解。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/28/Unity-C-编写第一个程序/" data-id="ck01u2uan0003kou8iqbh0ptc" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-测试" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/08/22/测试/" class="article-date">
-  <time datetime="2019-08-22T00:03:53.000Z" itemprop="datePublished">2019-08-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/22/测试/">测试</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/22/测试/" data-id="ck01u2ub6000lkou8njougdx3" class="article-share-link">Share</a>
-      
-      
     </footer>
   </div>
   
@@ -942,23 +922,23 @@
       <ul>
         
           <li>
+            <a href="/2019/09/02/C-条件布尔运算符和取反运算符/">C#条件布尔运算符</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/02/C-布尔运算符/">C#布尔运算符</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/02/C-算法小练习/">C#算法小练习</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/02/Unity3d-C-运算符的优先级/">Unity3d_C#运算符的优先级</a>
+          </li>
+        
+          <li>
             <a href="/2019/09/02/Unity3d-C-赋值运算符/">Unity3d_C#赋值运算符</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/02/Unity3d-C-接受用户输入的字符串/">Unity3d_C#接受用户输入的字符串</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/01/Unity3d-C-数学运算符/">Unity3d_C#数学运算符</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/31/字面值-转义字符/">Unity3d_C#字面值_转义字符</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/">Unity3d_C#声明变量,给它赋值,并使用它</a>
           </li>
         
       </ul>
