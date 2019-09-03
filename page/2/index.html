@@ -62,6 +62,417 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Unity3d-C-数学运算符" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/01/Unity3d-C-数学运算符/" class="article-date">
+  <time datetime="2019-09-01T13:41:47.000Z" itemprop="datePublished">2019-09-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/01/Unity3d-C-数学运算符/">Unity3d_C#数学运算符</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="数学运算符-加减乘除求余"><a href="#数学运算符-加减乘除求余" class="headerlink" title="数学运算符-加减乘除求余"></a>数学运算符-加减乘除求余</h2><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"></span><br><span class="line">namespace _007</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">int</span> num1 = <span class="number">45</span>;</span><br><span class="line">            <span class="keyword">int</span> num2 = <span class="number">13</span>;</span><br><span class="line">            <span class="keyword">int</span> res1 = num1 + num2;<span class="comment">//加</span></span><br><span class="line">            <span class="keyword">int</span> res2 = num1 - num2;<span class="comment">//减</span></span><br><span class="line">            <span class="keyword">int</span> res3 = num1 * num2;<span class="comment">//乘</span></span><br><span class="line">            <span class="keyword">int</span> res4 = num1 / num2;<span class="comment">//除</span></span><br><span class="line">            <span class="keyword">int</span> res5 = num1 % num2;<span class="comment">//求余</span></span><br><span class="line">            <span class="comment">//加减乘除求余两边的操作数都是整数的话，结果还是整数，不过不能被整除的话，自动略去小数部分</span></span><br><span class="line">            Console.WriteLine(<span class="string">"加法的结果:&#123;0&#125;\n减法的结果:&#123;1&#125;\n乘法的结果:&#123;2&#125;\n除法的结果:&#123;3&#125;\n求余:&#123;4&#125;"</span>,res1,res2,res3,res4,res5);</span><br><span class="line">            Console.ReadKey();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="数学运算符更多的使用"><a href="#数学运算符更多的使用" class="headerlink" title="数学运算符更多的使用"></a>数学运算符更多的使用</h2><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.字符串相加，用来连接两个字符串，返回一个字符串</span></span><br><span class="line"><span class="keyword">string</span> str1 = <span class="string">"123"</span>;</span><br><span class="line"><span class="keyword">string</span> str2 = <span class="string">"Lu"</span>;</span><br><span class="line"><span class="keyword">string</span> str = str1 + str2;</span><br><span class="line">Console.WriteLine(str);<span class="comment">//运算结果是:123Lu</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//2.当一个字符串跟一个数字相加的话，首先把数字转变成字符串，然后连接起来，结果是字符串</span></span><br><span class="line"><span class="keyword">string</span> str01 = <span class="string">"123"</span>;</span><br><span class="line"><span class="keyword">int</span> num01 = <span class="number">456</span>;</span><br><span class="line"><span class="keyword">string</span> res01 = str01 + num01;</span><br><span class="line">Console.WriteLine(res01);<span class="comment">//运算结果是：123456</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="关于数学运算的结果的类型"><a href="#关于数学运算的结果的类型" class="headerlink" title="关于数学运算的结果的类型"></a>关于数学运算的结果的类型</h3><p>当两边的操作数类型一致的时候，返回的结果跟操作数的类型一样<br>当两边的操作数类型不一致的时候，返回的结果跟类型大的操作数保持一致，这样做编译器是为了保证结果可以存的下，因为如果其中有一个类型大的操作数，很可能结果也是一个比较大的数值这样小类型是存不下的。</p>
+<h2 id="数学运算符-自加和自减运算符"><a href="#数学运算符-自加和自减运算符" class="headerlink" title="数学运算符 自加和自减运算符"></a>数学运算符 自加和自减运算符</h2><h3 id="数学运算符"><a href="#数学运算符" class="headerlink" title="数学运算符"></a>数学运算符</h3><table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>类别</th>
+<th>示例表达式</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>++</td>
+<td>一元</td>
+<td>var1=++var2;</td>
+<td>var1的值是var2+1,var2递增1</td>
+</tr>
+<tr>
+<td>–</td>
+<td>一元</td>
+<td>var1=–var2;</td>
+<td>var1的值是var2-1,var2递减1</td>
+</tr>
+<tr>
+<td>++</td>
+<td>一元</td>
+<td>var1=var2++;</td>
+<td>var1的值是var2,var2递增1</td>
+</tr>
+<tr>
+<td>–</td>
+<td>一元</td>
+<td>var1=var2–;</td>
+<td>var1的值是var2,var2递减1</td>
+</tr>
+</tbody></table>
+<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"></span><br><span class="line">namespace _008</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//数学运算符_自加 </span></span><br><span class="line">            <span class="comment">//int num1 = 45;</span></span><br><span class="line">            <span class="comment">//num1++;</span></span><br><span class="line">            <span class="comment">//++num1;    //++不管是放到操作数的前面还是后面，都是让操作数加1</span></span><br><span class="line">            <span class="comment">//int res = num1++;  //res的值=45  num1=46</span></span><br><span class="line">            <span class="comment">//int res = ++num1;    //res的值=46  num1=46</span></span><br><span class="line">            <span class="comment">//如果++放到前面会先进行自增，然后再进行其余的运算；如果放在操作数后面，会先使用操作数进行运算，然后让操作数自增。</span></span><br><span class="line">            <span class="comment">//Console.WriteLine(res+":"+num1);</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">//数学运算符_自减</span></span><br><span class="line">            <span class="keyword">int</span> num1 = <span class="number">45</span>;</span><br><span class="line">            <span class="keyword">int</span> res = num1--; <span class="comment">//res的值是45  num1的值是44</span></span><br><span class="line">            <span class="keyword">int</span> res2 = --num1;<span class="comment">//res2的值是43 num1的值是43</span></span><br><span class="line">            Console.WriteLine(res + <span class="string">":"</span> + res2);</span><br><span class="line">            Console.ReadKey();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/09/01/Unity3d-C-数学运算符/" data-id="ck036irx4000xd8u8n8yeaqop" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-字面值-转义字符" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/31/字面值-转义字符/" class="article-date">
+  <time datetime="2019-08-31T12:34:12.000Z" itemprop="datePublished">2019-08-31</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/31/字面值-转义字符/">Unity3d_C#字面值_转义字符</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h1><table>
+<thead>
+<tr>
+<th>转义序列</th>
+<th>产生的字符</th>
+<th>字符的Unicode值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>\‘</td>
+<td>单引号</td>
+<td>0x0027</td>
+</tr>
+<tr>
+<td>\“</td>
+<td>双引号</td>
+<td>0x0022</td>
+</tr>
+<tr>
+<td>\\</td>
+<td>反斜杠</td>
+<td>0x005C</td>
+</tr>
+<tr>
+<td>\0</td>
+<td>空</td>
+<td>0x0000</td>
+</tr>
+<tr>
+<td>\a</td>
+<td>警告(产生蜂鸣电脑会响一声)</td>
+<td>0x0007</td>
+</tr>
+<tr>
+<td>\b</td>
+<td>退格</td>
+<td>0x0008</td>
+</tr>
+<tr>
+<td>\f</td>
+<td>换页</td>
+<td>0x000C</td>
+</tr>
+<tr>
+<td>\n</td>
+<td>换行</td>
+<td>0x000A</td>
+</tr>
+<tr>
+<td>\r</td>
+<td>回车</td>
+<td>0x000D</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>水平制表符</td>
+<td>0x0009</td>
+</tr>
+<tr>
+<td>\v</td>
+<td>垂直制表符</td>
+<td>0x000B</td>
+</tr>
+</tbody></table>
+<h2 id="字符Unicode值的作用"><a href="#字符Unicode值的作用" class="headerlink" title="字符Unicode值的作用"></a>字符Unicode值的作用</h2><p>Unicode是一个16进制的数字，表示这个字符在内存中以哪个数字存储<br>也可以使用Unicode来代表一个转义字符(\u加上十六进制值)<br>“&#39;s like”<br>等于<br>“\u0027s like”</p>
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><img src="/2019/08/31/字面值-转义字符/1.jpg">
+
+<h1 id="使用-不识别转义字符"><a href="#使用-不识别转义字符" class="headerlink" title="使用@不识别转义字符"></a>使用@不识别转义字符</h1><h3 id="如果我们不想去识别字符串中的转义字符，可以在前面加一个-符号-除了双引号其他转义字符都不在识别"><a href="#如果我们不想去识别字符串中的转义字符，可以在前面加一个-符号-除了双引号其他转义字符都不在识别" class="headerlink" title="如果我们不想去识别字符串中的转义字符，可以在前面加一个@符号(除了双引号其他转义字符都不在识别)"></a>如果我们不想去识别字符串中的转义字符，可以在前面加一个@符号(除了双引号其他转义字符都不在识别)</h3><p>举例：”I’m a good man.\n\v You are bad girl\n”;<br>@字符的两个作用示例：<br>1.默认一个字符串的定义是放在一起的，如果想要占用多行。<br>2.用字符串表示路径<br>“c:\xxx\xx\xxx.doc”<br>使用@”c:\xxx\xx\xxx.doc”更能读懂</p>
+<h2 id="实例-1"><a href="#实例-1" class="headerlink" title="实例"></a>实例</h2><img src="/2019/08/31/字面值-转义字符/2.jpg">
+<p>如果需要加双引号的话，即在前面有@的情况下两个双引号代表一个双引号。<br>@””=”</p>
+<h4 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h4><img src="/2019/08/31/字面值-转义字符/Thank.jpg">
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/08/31/字面值-转义字符/" data-id="ck036irxg0018d8u8d4rhrcuf" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Unity3d-C-声明变量-给它赋值-并使用它" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/" class="article-date">
+  <time datetime="2019-08-31T02:12:16.000Z" itemprop="datePublished">2019-08-31</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/">Unity3d_C#声明变量,给它赋值,并使用它</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><p>为什么使用变量？<br>计算机程序的运行其实就是对数据的操作，数据有数字、文字、图片这些<br>数据如何在计算机中存储？<br>通过变量，你可以把计算机内存中的变量，当成一个盒子，盒子里面存储着东西，可以放入或者取出。</p>
+<h2 id="声明变量需要指定类型和变量名"><a href="#声明变量需要指定类型和变量名" class="headerlink" title="声明变量需要指定类型和变量名"></a>声明变量需要指定类型和变量名</h2><p>type name;<br>type表示使用什么类型的盒子，来存储数据<br>name表示存储这个盒子的名字<br>实例：(每一个声明都是一条语句，语句以;结束)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int age;//int整数类型盒子，age是盒子的名字</span><br><span class="line">int hp;</span><br><span class="line">string name;//字符串类型盒子，name是盒子的名字</span><br></pre></td></tr></table></figure>
+
+<h4 id="实例1"><a href="#实例1" class="headerlink" title="实例1"></a>实例1</h4><img src="/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/1.jpg">
+<p>按Ctrl+F5可运行时暂停，或者加多这条语句Console.ReadKey();按F5也可运行时暂停</p>
+<h2 id="变量类型有哪些？"><a href="#变量类型有哪些？" class="headerlink" title="变量类型有哪些？"></a>变量类型有哪些？</h2><h3 id="简单类型-整数"><a href="#简单类型-整数" class="headerlink" title="简单类型-整数"></a>简单类型-整数</h3><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>别名</th>
+<th>允许的值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>sbyte</td>
+<td>System.SByte</td>
+<td>在-128~127之间的整数</td>
+</tr>
+<tr>
+<td>byte</td>
+<td>System.Byte</td>
+<td>在0~255之间的整数</td>
+</tr>
+<tr>
+<td>short</td>
+<td>System.Int16</td>
+<td>在-32768~32767之间的整数</td>
+</tr>
+<tr>
+<td>usbort</td>
+<td>System.UInt16</td>
+<td>在0~65535之间的整数</td>
+</tr>
+<tr>
+<td>int</td>
+<td>System.Int32</td>
+<td>在-2147483648~2147483647之间的整数</td>
+</tr>
+<tr>
+<td>uint</td>
+<td>System.UInt32</td>
+<td>在0~4294967295之间的整数</td>
+</tr>
+<tr>
+<td>long</td>
+<td>System.Int64</td>
+<td>在-9223372036854775808~9223372036854775807之间的整数</td>
+</tr>
+<tr>
+<td>ulong</td>
+<td>System.UInt64</td>
+<td>在0~18446744073709551615之间的整数</td>
+</tr>
+</tbody></table>
+<h4 id="实例2"><a href="#实例2" class="headerlink" title="实例2"></a>实例2</h4><img src="/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/2.jpg">
+<p>根据实际情况来选择合适的类型可节约内存，达到优化效果，比如视频点击量过亿的可以选择long类型；年龄可以选byte类型，年龄一般不超过255，除了史前动物。。</p>
+<h3 id="简单类型-小数"><a href="#简单类型-小数" class="headerlink" title="简单类型-小数"></a>简单类型-小数</h3><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>别名</th>
+<th>m的最小值</th>
+<th>m的最大值</th>
+<th>e的最小值</th>
+<th>e的最大值</th>
+<th>近似的最小值</th>
+<th>近似的最大值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>float</td>
+<td>System.Single</td>
+<td>0</td>
+<td>2的24次方</td>
+<td>-149</td>
+<td>104</td>
+<td>1.5x10的-45次方</td>
+<td>3.4x10的35次方</td>
+</tr>
+<tr>
+<td>double</td>
+<td>System.Double</td>
+<td>0</td>
+<td>2的53次方</td>
+<td>-1075</td>
+<td>970</td>
+<td>5.0x10的-324次方</td>
+<td>1.7x10的308次方</td>
+</tr>
+<tr>
+<td>decimal</td>
+<td>System.Decimal</td>
+<td>0</td>
+<td>2的96次方</td>
+<td>-26</td>
+<td>0</td>
+<td>1.0x10的-28次方</td>
+<td>7.9x10的28次方</td>
+</tr>
+</tbody></table>
+<h4 id="实例3"><a href="#实例3" class="headerlink" title="实例3"></a>实例3</h4><img src="/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/3.jpg">
+
+
+<h3 id="简单类型-非数值类型"><a href="#简单类型-非数值类型" class="headerlink" title="简单类型-非数值类型"></a>简单类型-非数值类型</h3><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>别名</th>
+<th>允许的值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>char</td>
+<td>System.Char</td>
+<td>一个Unicode字符，存储0~65535之间的整数</td>
+</tr>
+<tr>
+<td>bool</td>
+<td>System.Boolean</td>
+<td>布尔值；true成false</td>
+</tr>
+<tr>
+<td>string</td>
+<td>System.String</td>
+<td>一组字符</td>
+</tr>
+</tbody></table>
+<h4 id="实例4"><a href="#实例4" class="headerlink" title="实例4"></a>实例4</h4><img src="/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/4.jpg">
+
+<h4 id="实例5"><a href="#实例5" class="headerlink" title="实例5"></a>实例5</h4><img src="/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/5.jpg">
+
+<h2 id="多变量声明和赋值"><a href="#多变量声明和赋值" class="headerlink" title="多变量声明和赋值"></a>多变量声明和赋值</h2><p>我们可以使用一条语句声明多个类型一样的变量<br>string name1,name2;<br>在多变量声明中，可以在变量后面跟上=，对其中的一个变量或者部分或者全部变量进行初始化</p>
+<h3 id="变量在使用之前必须初始化"><a href="#变量在使用之前必须初始化" class="headerlink" title="变量在使用之前必须初始化"></a>变量在使用之前必须初始化</h3><p>怎么判断变量有没有使用，当你从变量的盒子里面取东西的时候<br>就是要使用这个变量的时候，初始化就是先往这个盒子里面放入东西，才能去取</p>
+<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"></span><br><span class="line">namespace _006_变量的声明和赋值</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//Ctrl+K然后Ctrl+C这是一个组合快捷键可以注释选中行</span></span><br><span class="line">            <span class="comment">//Ctrl+K然后Ctrl+U取消注释选中行</span></span><br><span class="line">            <span class="comment">//变量在使用之前必须初始化</span></span><br><span class="line">            <span class="keyword">int</span> age=<span class="number">20</span>;<span class="comment">//第一次给变量赋值，就叫做初始化</span></span><br><span class="line">            age = <span class="number">25</span>;<span class="comment">//后面都是赋值</span></span><br><span class="line">            <span class="keyword">int</span> hp, mp=<span class="number">90</span>, exp=<span class="number">80</span>;</span><br><span class="line">            hp = <span class="number">100</span>;</span><br><span class="line">            Console.WriteLine(hp);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="感谢观看"><a href="#感谢观看" class="headerlink" title="感谢观看"></a>感谢观看</h4><img src="/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/Thank.jpg">
+
+
+
+
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/08/31/Unity3d-C-声明变量-给它赋值-并使用它/" data-id="ck036irwi000kd8u8bs5vo3bu" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Unity3d-C-格式化字符串" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/31/Unity3d-C-格式化字符串/" class="article-date">
+  <time datetime="2019-08-31T01:14:59.000Z" itemprop="datePublished">2019-08-31</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/31/Unity3d-C-格式化字符串/">Unity3d-C#格式化字符串</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>当利用Write和WriteLine方法输入的时候，可以对字符串进行格式化输出，什么是格式化输出呢？<br>Console.WriteLine(“两个数相加{0}+{1}={2}”,2,3,5);<br>Console.WriteLine(格式字符串(含替代标记)，替换值0，替换值1，替换值2，······);<br> <img src="/2019/08/31/Unity3d-C-格式化字符串/gsh.jpg"></p>
+<p> 多重标记和值<br> <img src="/2019/08/31/Unity3d-C-格式化字符串/2.jpg"><br> <img src="/2019/08/31/Unity3d-C-格式化字符串/3.jpg"><br> <img src="/2019/08/31/Unity3d-C-格式化字符串/Thank.jpg"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/08/31/Unity3d-C-格式化字符串/" data-id="ck036irx3000wd8u8il3ewqoq" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Unity-C-关键字不能用来做变量名" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/08/31/Unity-C-关键字不能用来做变量名/" class="article-date">
@@ -201,7 +612,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/31/Unity-C-关键字不能用来做变量名/" data-id="ck02ifflo0003p0u8nmgthxbc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/31/Unity-C-关键字不能用来做变量名/" data-id="ck036irwd000dd8u813xspka3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
@@ -261,7 +672,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/30/Unity-C-命名规范/" data-id="ck02ifflp0004p0u8ta6qedon" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/30/Unity-C-命名规范/" data-id="ck036irwf000fd8u8bcltwr5f" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
@@ -305,7 +716,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/28/Unity-C-编写第一个程序/" data-id="ck02ifflr0005p0u8vglizrbi" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/28/Unity-C-编写第一个程序/" data-id="ck036irwg000id8u8ivul1d52" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
@@ -343,7 +754,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/22/测试/" data-id="ck02iffme000vp0u8szdvivyb" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/22/测试/" data-id="ck036irxi001ad8u8z7vkpudg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -390,7 +801,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/21/Unity3d连接MySql查询数据，在UI显示数据/" data-id="ck02iffm7000lp0u8zd0temli" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/21/Unity3d连接MySql查询数据，在UI显示数据/" data-id="ck036irxb0013d8u85sihriek" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySql/">MySql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
@@ -430,143 +841,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/20/第一篇文章/" data-id="ck02iffmc000sp0u8ocikj4p1" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/20/第一篇文章/" data-id="ck036irxj001cd8u8m6gq6627" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/unity3D/">unity3D</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-第三篇文章" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/08/20/第三篇文章/" class="article-date">
-  <time datetime="2019-08-20T04:06:24.000Z" itemprop="datePublished">2019-08-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/20/第三篇文章/">第三篇文章</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="我的文章"><a href="#我的文章" class="headerlink" title="我的文章"></a>我的文章</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hello world</span><br><span class="line">print(&quot;helloworld&quot;);</span><br><span class="line">工工工工工工工工工工工工工工工工工工工工工工</span><br></pre></td></tr></table></figure>
-
-<img src="/2019/08/20/第三篇文章/Thank.jpg">
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/20/第三篇文章/" data-id="ck02iffmf000xp0u8zmi63hzo" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/unity3D/">unity3D</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-第二篇文章" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/08/20/第二篇文章/" class="article-date">
-  <time datetime="2019-08-20T04:06:24.000Z" itemprop="datePublished">2019-08-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/20/第二篇文章/">第二篇文章</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="我的文章"><a href="#我的文章" class="headerlink" title="我的文章"></a>我的文章</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hello world</span><br><span class="line">print(&quot;helloworld&quot;);</span><br><span class="line">工工工工工工工工工工工工工工工工工工工工工工</span><br></pre></td></tr></table></figure>
-
-<p>表格插入<br>ABCD | EFGH | IGKL<br>—–|——|—-<br>a | b | c<br>d | e | f<br>g | h | i</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/20/第二篇文章/" data-id="ck02iffmh0010p0u8y4mrmdqo" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/unity3D/">unity3D</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/08/20/hello-world/" class="article-date">
-  <time datetime="2019-08-20T03:51:56.990Z" itemprop="datePublished">2019-08-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/20/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/20/hello-world/" data-id="ck02iffm8000np0u84zy4um0z" class="article-share-link">Share</a>
-      
-      
     </footer>
   </div>
   
@@ -578,7 +857,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
   </nav>
 
 </section>
@@ -624,23 +903,23 @@
       <ul>
         
           <li>
+            <a href="/2019/09/03/C-三元运算符/">C#_三元运算符</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/03/C-if-else语句/">C#_if else语句</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/03/C-分支-if语句/">C#_分支—if语句</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/03/C-goto语句/">C#_goto语句</a>
+          </li>
+        
+          <li>
             <a href="/2019/09/02/C-条件布尔运算符和取反运算符/">C#条件布尔运算符</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/02/C-布尔运算符/">C#布尔运算符</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/02/C-算法小练习/">C#算法小练习</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/02/Unity3d-C-运算符的优先级/">Unity3d_C#运算符的优先级</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/02/Unity3d-C-赋值运算符/">Unity3d_C#赋值运算符</a>
           </li>
         
       </ul>
