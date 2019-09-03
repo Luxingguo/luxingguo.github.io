@@ -62,6 +62,49 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-C-循环的中断continue-goto和return结束循环" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/03/C-循环的中断continue-goto和return结束循环/" class="article-date">
+  <time datetime="2019-09-03T13:36:44.000Z" itemprop="datePublished">2019-09-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/03/C-循环的中断continue-goto和return结束循环/">C#_循环的中断continue,goto和return结束循环</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="循环的中断-continue-终止当前循环继续下一个循环"><a href="#循环的中断-continue-终止当前循环继续下一个循环" class="headerlink" title="循环的中断 continue(终止当前循环继续下一个循环)"></a>循环的中断 continue(终止当前循环继续下一个循环)</h2><p>使用continue,只会终止当次循环，继续运行下次循环</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"></span><br><span class="line">namespace _28</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//int a = 1;            </span></span><br><span class="line">            <span class="comment">//while (true)</span></span><br><span class="line">            <span class="comment">//&#123;</span></span><br><span class="line">            <span class="comment">//    a++;</span></span><br><span class="line">            <span class="comment">//    if (a==5)</span></span><br><span class="line">            <span class="comment">//    &#123;</span></span><br><span class="line">            <span class="comment">//        continue;//跳过这次,不运行下面的代码</span></span><br><span class="line">            <span class="comment">//    &#125;</span></span><br><span class="line">            <span class="comment">//    if (a==10)</span></span><br><span class="line">            <span class="comment">//    &#123;</span></span><br><span class="line">            <span class="comment">//        break;//直接退出循环体</span></span><br><span class="line">            <span class="comment">//    &#125;</span></span><br><span class="line">            <span class="comment">//    Console.WriteLine(a); //当index==5的时候，使用了continue关键字，那么continue后面的代码就不会去执行了，直接会进行循环的条件判断，根据判断结果判定是否执行下一次循环</span></span><br><span class="line">            <span class="comment">//&#125;</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">//接受用户输入的整数，如果用户输入的是大于0的偶数，就相加，如果用户输入的是大于0的奇数就不相加，如果用户输入的是0，就把和输出并退出程序</span></span><br><span class="line">            <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">while</span> (<span class="literal">true</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">int</span> num = Convert.ToInt32(Console.ReadLine());</span><br><span class="line">                <span class="keyword">if</span> (num==<span class="number">0</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (num%<span class="number">2</span>==<span class="number">1</span>)<span class="comment">//如果和2求余结果是1，那么就是奇数，则跳转不继续下面的代码</span></span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                sum += num;</span><br><span class="line">               </span><br><span class="line">            &#125;</span><br><span class="line">            Console.WriteLine(sum);</span><br><span class="line">            Console.ReadKey();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="循环的中断-goto可以直接跳到某一个位置"><a href="#循环的中断-goto可以直接跳到某一个位置" class="headerlink" title="循环的中断 goto可以直接跳到某一个位置"></a>循环的中断 goto可以直接跳到某一个位置</h2><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"></span><br><span class="line">namespace _29</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//接受用户输入，如果输入的0，就使用goto退出循环</span></span><br><span class="line">            <span class="keyword">while</span> (<span class="literal">true</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">int</span> mun = Convert.ToInt32(Console.ReadLine());</span><br><span class="line">                <span class="keyword">if</span> (mun==<span class="number">0</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">goto</span> mylabel;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;           </span><br><span class="line">            mylabel: Console.WriteLine(<span class="string">"跳出循环了"</span>);</span><br><span class="line">            Console.ReadKey();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="循环的中断-return跳出循环-跳出函数"><a href="#循环的中断-return跳出循环-跳出函数" class="headerlink" title="循环的中断 return跳出循环(跳出函数)"></a>循环的中断 return跳出循环(跳出函数)</h2><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"></span><br><span class="line">namespace _29</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;            </span><br><span class="line">            <span class="comment">//接受用户输入，如果输入的0，就使用return退出循环</span></span><br><span class="line">            <span class="keyword">while</span> (<span class="literal">true</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">int</span> num = Convert.ToInt32(Console.ReadLine());</span><br><span class="line">                <span class="keyword">if</span> (num==<span class="number">0</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">return</span>;<span class="comment">//用来终止方法的，表示方法运行结束，剩余的代码不执行了</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            Console.WriteLine(<span class="string">"跳转循环了"</span>);</span><br><span class="line">            Console.ReadKey();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/09/03/C-循环的中断continue-goto和return结束循环/" data-id="ck03y6qq6000j8wu8tht5xyqp" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-C-循环的终止break语句" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/09/03/C-循环的终止break语句/" class="article-date">
@@ -91,7 +134,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/03/C-循环的终止break语句/" data-id="ck03m4ulg000h4ku8jbdm3si8" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/09/03/C-循环的终止break语句/" data-id="ck03y6qq4000h8wu8j2hahofz" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li></ul>
@@ -133,7 +176,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/03/C-for循环/" data-id="ck03m4uko00004ku84uhv91vk" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/09/03/C-for循环/" data-id="ck03y6qpm00018wu8v0abx69f" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li></ul>
@@ -180,7 +223,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/03/C-while循环/" data-id="ck03m4ul100044ku8vwahmafu" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/09/03/C-while循环/" data-id="ck03y6qpt00058wu8f76gh2as" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li></ul>
@@ -224,7 +267,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/03/C-switch语句-基本语法/" data-id="ck03m4ul400054ku8yibmfxk5" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/09/03/C-switch语句-基本语法/" data-id="ck03y6qps00048wu811qtd622" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li></ul>
@@ -262,7 +305,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/03/C-算法练习-在数组里取第2大的数/" data-id="ck03m4ulk000n4ku8g6qhjonh" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/09/03/C-算法练习-在数组里取第2大的数/" data-id="ck03y6qqc000r8wu8yj974utq" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li></ul>
@@ -302,7 +345,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/03/C-使用if-else语句进行多条件判断/" data-id="ck03m4ula000a4ku82qahdg5r" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/09/03/C-使用if-else语句进行多条件判断/" data-id="ck03y6qpw00088wu86s76soez" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li></ul>
@@ -348,7 +391,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/03/C-三元运算符/" data-id="ck03m4ul800084ku8qo2o7zz6" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/09/03/C-三元运算符/" data-id="ck03y6qpy000a8wu8ag230fsl" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li></ul>
@@ -391,7 +434,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/03/C-if-else语句/" data-id="ck03m4ukx00034ku8m7z2r5u0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/09/03/C-if-else语句/" data-id="ck03y6qpq00038wu8j2q6hag6" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li></ul>
@@ -433,48 +476,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/03/C-分支-if语句/" data-id="ck03m4uld000d4ku83v2jsc82" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-C-goto语句" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/09/03/C-goto语句/" class="article-date">
-  <time datetime="2019-09-03T00:38:43.000Z" itemprop="datePublished">2019-09-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/03/C-goto语句/">C#_goto语句</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="goto语句"><a href="#goto语句" class="headerlink" title="goto语句"></a>goto语句</h2><p>在程序中我们可以给代码加上标签，这样就可以使用goto语句直接跳到标签的地方去执行<br>goto语句的语法<br>goto&lt;1labelName&gt;;<br>标签定义<br>&lt;1labelName&gt;</p>
-<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"></span><br><span class="line">namespace _18</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">int</span> labal = <span class="number">5</span>;</span><br><span class="line">            <span class="keyword">goto</span> mylabe; <span class="comment">//goto语句用来控制程序跳转到某个位置            </span></span><br><span class="line">            labal++;<span class="comment">//中间的代码就会被过滤掉，直接跳转到goto语句那</span></span><br><span class="line">            mylabe: Console.WriteLine(labal);</span><br><span class="line">            Console.ReadKey();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/03/C-goto语句/" data-id="ck03m4ukt00014ku8txev3qv1" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/09/03/C-分支-if语句/" data-id="ck03y6qq2000f8wu8vq4asuoq" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li></ul>
@@ -536,6 +538,10 @@
       <ul>
         
           <li>
+            <a href="/2019/09/03/C-循环的中断continue-goto和return结束循环/">C#_循环的中断continue,goto和return结束循环</a>
+          </li>
+        
+          <li>
             <a href="/2019/09/03/C-循环的终止break语句/">C#_循环的终止break语句</a>
           </li>
         
@@ -549,10 +555,6 @@
         
           <li>
             <a href="/2019/09/03/C-switch语句-基本语法/">C#_switch语句-基本语法</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/03/C-算法练习-在数组里取第2大的数/">C#_算法练习-在数组里取第2大的数</a>
           </li>
         
       </ul>
